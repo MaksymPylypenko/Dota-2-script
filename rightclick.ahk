@@ -69,7 +69,7 @@ CreateGUI(text, c, timer){
 	Gui, Add, Text, Center , %text% //;the text to display	
 	Gui, Show, y50 NA
 
-	sleep, timer
+	sleep, timerp[]
 	Gui, Destroy
 }
 
@@ -85,16 +85,32 @@ return
 // Mana
 // x1 = 950	   x2 = 1000	x3 = 1055	y1 = 800	y2 = 845	y3 = 880
 LAlt & 5::
+
+	PixelGetColor, check, 865,881, RGB
+	//msgbox, color(%check%)	
+	
+	// if enough mana, skip
+	if check = 0x4971E7
+	{
+		use(-1)	
+		Goto, Skipper
+		
+	}
+	
 	// center 
+	Send, {Space}
 	Send, 1
-	Send, 1
+	Send, 1	
 	
 	PixelGetColor, soulring1, 938,793, RGB	
 	PixelGetColor, bottle1, 1045,835, RGB
 	PixelGetColor, bottle2, 992,792, RGB	
-	//msgbox, color(%bottle%)	
 
-	// IF soulring in cd use bottle 1 or 2
+	Send {Shift Down}
+
+
+	
+	// if soulring in cd use bottle 1 or 2
 	if soulring1 = 0x1D1D24 
 	{ 				
 		if bottle2 = 0xB11314 
@@ -118,9 +134,18 @@ LAlt & 5::
 		use(2)	
 	else
 		drop(2)							
-		
+
+	// make sure not to fail 	
 	if soulring1 != 0x4A496B // || soulring != 0x4A496B
-		drop(1)
+	{
+		Sleep, 200
+		PixelGetColor, soulring1, 938,793, RGB	
+		if soulring1 != 0x4A496B
+		{
+			drop(1)
+		}		
+	}
+		
 
 	drop(3)
 	
@@ -128,22 +153,28 @@ LAlt & 5::
 	if soulring1 = 0x4A496B 
 		use(1)
 
+	// if no soulring, move 1st from backpack
 	if soulring1 != 0x4A496B				
 		drag(7, 1)
 
-	if bottle2 != 0xB11314		
+	// if no bottle detected, move 2nd from backpack
+	if (bottle1 != 0x640C0C && bottle2 != 0xB11314)	
 		drag(8, 2)
 
+	// try to use 1st slot
 	if soulring1 != 0x4A496B	
 		use(1)	
 
-	if bottle1 != 0x640C0C
+	// try to use 2nd slot
+	if (bottle1 != 0x640C0C && bottle2 != 0xB11314)	
 		use(2)	
 	
+	// move back 1st
 	if soulring1 != 0x4A496B				
 		drag(1, 7)
 
-	if bottle2 != 0xB11314		
+	// move back 2nd
+	if (bottle1 != 0x640C0C && bottle2 != 0xB11314)	
 		drag(2, 8)		
 
 	pickup()		
@@ -154,8 +185,13 @@ LAlt & 5::
 	if bottle2 = 0xB11314				
 		use(2)
 	
-	use(-1)
+	// check if need rearm
+	PixelGetColor, travel, 1009,843, RGB
+	if travel != 0X760600
+		use(-1)
+	
 	Skipper:
+	Send {Shift Up}
 return
 	
 // x1 = 950	   x2 = 1000	x3 = 1055	y1 = 800	y3 = 845	y3 = 880
@@ -181,14 +217,14 @@ pickup()
 		Click, 748, 470, right
 		Sleep, 50
 	}	
-	if bottle1 != 0xB11314
+	if bottle2 != 0xB11314
 	{
 		Click, 784, 476, right
 		Sleep, 50
 	}
 	Click, 810, 477, right 
 	Sleep, 50	
-	if bottle2 != 0x640C0C	
+	if bottle1 != 0x640C0C	
 	{
 		Click, 834, 462, right
 		Sleep, 50	
