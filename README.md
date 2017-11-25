@@ -1,7 +1,7 @@
 # Dota-2-script
 
 ### Hotkeys: 
-* `win` - pause/unpause
+* `num_0` - pause/unpause
 * `alt + t`  - spam t
 * `alt + right click`  - spam right click 
 * `alt + 5` - mana abuse
