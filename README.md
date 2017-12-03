@@ -9,30 +9,30 @@ The script is written in [**AutoHotkey**](https://autohotkey.com/download/) scri
 ## Running
 
 1. Make sure your keyboard layout is set to ENG.
-2. To run the script simply open [rightclick.ahk]. An appropriate icon will appear.
+2. To run the script simply open **rightclick.ahk**. An appropriate icon will appear.
 3. Press num_0 to pause the script. An appropriate sound will be played. Press num_0 again to unpause.
 4. You should now be able to use hotkeys.
 
 ### rightclick.ahk
-* `num_0` - pause/unpause + sound notification
+* `num_0` - pause/unpause the script + sound notification
 * `b` - hold b then press left click (quick patrul)
 * `v` - hold v then press right click (quick directional move)
 * `alt + right click` - spam right click (pickup runes)
 
 The next hotkeys should probably be in a different file, since I only use them for tinker.
-* `alt + t` - spam t (rearm, blink out)
-* `alt + 5` - mana abuse (efficient mana regeneration on fontain)
+* `alt + t` - spams t (rearm, blink out)
+* `alt + 5` - uses smart mana abuse (efficient mana regeneration on fontain)
 
 ### Known issues 
 * Mana abuse works only on 1600x900 resolution.
-* T spammer sometimes fails to stop. (fixed by locking numlock on).
-* Fails to see an active SoulRing because of the hover effect when the item is rearmed. (fixed by adding 200ms for double check)
+* T spammer sometimes fails to stop. (fixed by locking numlock on)
+* Fails to see an active soul ring because of the hover effect after rearm. (fixed by adding 200ms for double check)
 
 ### How mana abuse works ?
 The script checks your items (1,2,6) and mana status (above 75% or not) by checking the color of pixels in appropriate points on your screen. 
 * Available positions for soul ring are 1st slot or 7th slot (1st in backpack).
 * Available positions for bottle are 2nd, 6th slot or 8th slot (2st in backpack). 
-* Static positions for blink and travels are 4th and 5th slots (will never be dropped). 
+* Available positions for blink and travels are 4th and 5th slots. These items will never be dropped. 
 
 When sufficient information is collected it decides what to do depending on the situation. These are some (not all) rules:
 1. IF enough mana, THEN use rearm
