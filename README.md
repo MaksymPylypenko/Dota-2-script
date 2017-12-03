@@ -1,6 +1,6 @@
 # Dota-2-script
 
-An external dota 2 script for dota 2 running on Windows
+An external dota 2 script for Windows.
 
 ## Getting Started
 
@@ -30,14 +30,14 @@ The next hotkeys should probably be in a different file, since I only use them f
 
 ### How mana abuse works ?
 The script checks your items (1,2,6) and mana status (above 75% or not) by checking the color of pixels in appropriate points on your screen. 
-* Available positions for SoulRing are 1st slot or 7th slot (1st in backpack).
-* Available positions for Bottle are 2nd, 6th slot or 8th slot (2st in backpack). 
-* Static positions for Blink and Travels are 4th and 5th slots (will never be dropped). 
+* Available positions for soul ring are 1st slot or 7th slot (1st in backpack).
+* Available positions for bottle are 2nd, 6th slot or 8th slot (2st in backpack). 
+* Static positions for blink and travels are 4th and 5th slots (will never be dropped). 
 
-When sufficient information is collected it decides what to do depending on the situation. For example:
-1. If enough mana, THEN use rearm
-2. Not enough mana, Soul Ring (1st slot) is in cooldown, try to use bottle then try to use rearm. 
-3. Not enough mana, Soul Ring (1st slot) is ready, 2nd or 6th is not a Bottle, THEN drop 2,3,6, use SoulRing, move bottle from backpack to 2nd slot and use, move bottle back to backpack, pickup dropped items.
+When sufficient information is collected it decides what to do depending on the situation. These are some (not all) rules:
+1. IF enough mana, THEN use rearm
+2. IF not enough mana, soul ring (1st slot) is in cooldown, THEN try to use bottle, try to use rearm. 
+3. IF not enough mana, soul ring (1st slot) is ready, 2nd or 6th is not a bottle, THEN drop 2,3,6, use soul ring, move bottle from backpack to 2nd slot and use, move bottle back to backpack, pickup dropped items.
 
 ## Under development 
 Additional scripts... 
