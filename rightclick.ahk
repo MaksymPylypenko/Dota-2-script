@@ -2,6 +2,7 @@
 SendMode Input 
 SetWorkingDir %A_ScriptDir%  
 #CommentFlag //
+SetNumlockState, AlwaysOn
 
 // // Key spammer
 LAlt & t::
@@ -91,7 +92,7 @@ LAlt & 5::
 	else
 		drop(2)							
 
-	// make sure not to fail 	
+	// make sure not to fail, due to hover effect	
 	if soulring1 != 0x4A496B // || soulring != 0x4A496B
 	{
 		Sleep, 200
