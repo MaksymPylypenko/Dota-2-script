@@ -35,9 +35,15 @@ The script checks your items (1,2,6) and mana status (above 75% or not) by check
 * Available positions for blink and travels are 4th and 5th slots. These items will never be dropped. 
 
 When sufficient information is collected it decides what to do depending on the situation. These are some (not all) rules:
-1. IF enough mana, THEN use rearm
-2. IF not enough mana, soul ring (1st slot) is in cooldown, THEN try to use bottle, try to use rearm. 
-3. IF not enough mana, soul ring (1st slot) is ready, 2nd or 6th is not a bottle, THEN drop 2,3,6, use soul ring, move bottle from backpack to 2nd slot and use, move bottle back to backpack, pickup dropped items.
+
+1. IF not enough mana, soulring is in cooldown, THEN try to use bottle, try to use rearm. 
+2. IF not enough mana, soulring is ready, THEN try to use bottle, drop 3,5, use soulring, pickup 3,5, use bottle.
+
+<a href='https://photos.google.com/share/AF1QipO0GWQpaQXsnX_UpXqlOrz7vhFJKIE3eubbmNgkc8bWicxp3op1CKgoYAub0sP5pA?key=UGRpV2RQXzR2MTZOelFqMWFzYzhJOVUyQlU2UHd3&source=ctrlq.org'><img src='https://lh3.googleusercontent.com/8hI9I257oc9hCYSjW_Vgho6wgRWcJlx45cYA8bxFpdSjUHWnzSLI4efPeBAuQ_8yyk5a3HNcxb9Hh67uZ4MGEVNwOZx66s9xng8wZqvm2PiLhm1gUSput_tfbJ6seVXG-4zQzHQNhWg' /></a>
+
+1. IF not enough mana, no soulring, no bottle, THEN drop 1,2,3,6, use soulring and bottle from backpack, pickup 1,2,3,6, use rearm
+
+<a href='https://photos.google.com/share/AF1QipPHxg-puAPJUO4gUxWpQhmGcjgR3DW2WUMQ-ydxDNFzCVrodZS2yP8ufrPkKSnCpA?key=c2tEOTlELWNOdTRWeXN3TnlOSXpLSS1Wc3NxQjJR&source=ctrlq.org'><img src='https://lh3.googleusercontent.com/HOzm8Ji4t_5QGFLn5FvFzdZl5bApNQkJY60Or09EoDvoTuctVSLxTHXTvgoKEUkdaR3UqKbNtD6b3DnQBxPKLsMbN0cPwgaSKo9dhTh6LM2o13S-SKXIJjb4-vuyp-wJ9KsEadney8A' /></a>
 
 ## Under development 
 Additional scripts... 
