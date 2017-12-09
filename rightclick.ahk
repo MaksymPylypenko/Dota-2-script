@@ -3,6 +3,7 @@ SendMode Input
 SetWorkingDir %A_ScriptDir%  
 #CommentFlag //
 SetNumlockState, AlwaysOn
+SetCapsLockState, Off
 
 CapsLock:: /
 
