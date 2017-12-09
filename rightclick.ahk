@@ -4,6 +4,8 @@ SetWorkingDir %A_ScriptDir%
 #CommentFlag //
 SetNumlockState, AlwaysOn
 
+CapsLock:: /
+
 // // Key spammer
 LAlt & t::
 While GetKeyState("t","p")
@@ -32,7 +34,7 @@ return
 
 
 // Pause / Unpause 
-numpad0::  
+LWin::  
 	suspend
 	SoundPlay, sounds/scan.mp3
 return
@@ -42,7 +44,7 @@ return
 // Mana
 // x1 = 950	   x2 = 1000	x3 = 1055	y1 = 800	y2 = 845	y3 = 880
 LAlt & 5::
-
+	
 	PixelGetColor, check, 865,881, RGB
 	//msgbox, color(%check%)	
 	

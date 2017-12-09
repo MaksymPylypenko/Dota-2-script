@@ -10,14 +10,15 @@ The script is written in [**AutoHotkey**](https://autohotkey.com/download/) scri
 
 1. Make sure your keyboard layout is set to ENG.
 2. To run the script simply open **rightclick.ahk**. An appropriate icon will appear.
-3. Press num_0 to pause the script. An appropriate sound will be played. Press num_0 again to unpause.
+3. Press windows key to pause the script. An appropriate sound will be played. Press it again to unpause.
 4. You should now be able to use hotkeys.
 
 ### rightclick.ahk
-* `num_0` - pause/unpause the script + sound notification
+* `win` - pause/unpause the script + sound notification
 * `b` - hold b then press left click (quick patrul)
 * `v` - hold v then press right click (quick directional move)
 * `alt + right click` - spam right click (pickup runes)
+* `capslock` - remapped to "/"
 
 The next hotkeys should probably be in a different file, since I only use them for tinker.
 * `alt + t` - spams t (rearm, blink out)
@@ -25,7 +26,7 @@ The next hotkeys should probably be in a different file, since I only use them f
 
 ### Known issues 
 * Mana abuse works only on 1600x900 resolution.
-* T spammer sometimes fails to stop. (fixed by locking numlock on)
+* T spammer sometimes fails to stop. (make sure the capslock is off to avoid)
 * Fails to see an active soul ring because of the hover effect after rearm. (fixed by adding 200ms for double check)
 
 ### How mana abuse works ?
