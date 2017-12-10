@@ -24,7 +24,7 @@ The next hotkeys should probably be in a different file, since I only use them f
 
 ### Known issues 
 * Mana abuse and courier resend works only on 1600x900 resolution.
-* T spammer sometimes fails to stop. (fixed by disabling and remapping capslock)
+* T spammer sometimes fails to stop. (fixed by disabling and remapping the capslock)
 * Fails to see an active soul ring because of the hover effect after rearm. (fixed by adding 200ms for double check)
 
 ### How mana abuse works ?
