@@ -12,7 +12,7 @@ The script is written in [**AutoHotkey**](https://autohotkey.com/download/) scri
 
 ### rightclick.ahk
 * `win` - pause/unpause the script + sound notification
-* `capslock` - remapped to "/" 
+* `capslock` - remapped to `/` 
 * `b` - hold b then press left click (quick patrul)
 * `v` - hold v then press right click (quick directional move)
 * `alt + right click` - spam right click (pickup runes)
