@@ -4,15 +4,15 @@ SetWorkingDir %A_ScriptDir%
 #CommentFlag //
 SetNumlockState, AlwaysOn
 SetCapsLockState, Off
-
 CapsLock:: /
 
-// // Key spammer
+
+// Key spammer
 LAlt & t::
 While GetKeyState("t","p")
 {
-  Send, t
-  Sleep, 10
+	Send, t
+	Sleep, 10
 }
 return
 
@@ -21,8 +21,8 @@ return
 LAlt & ~RButton::  
 While GetKeyState("RButton","p")
 {
-  Click, R
-  Sleep, 50
+	Click, R
+	Sleep, 50
 }
 return
 
@@ -32,8 +32,6 @@ return
 ~v:: Click, R
 
 
-
-
 // Pause / Unpause 
 LWin::  
 	suspend
@@ -41,12 +39,32 @@ LWin::
 return
 
 
+// Resend cour 
+LAlt & `::
+{
+	mousegetpos,x,y
+
+	Click, right, 1514, 875  
+	MouseMove, 1514, 816  
+	Sleep, 250
+
+	PixelGetColor, check, 1514, 816, RGB	
+	
+
+	if check != 0xEAE9E9
+	{
+		Click, 1514, 816
+	}
+	
+	mousemove,%x%,%y%
+}
+return
 
 // Mana
 // x1 = 950	   x2 = 1000	x3 = 1055	y1 = 800	y2 = 845	y3 = 880
 LAlt & 5::
 	
-	PixelGetColor, check, 865,881, RGB
+	PixelGetColor, check, 865,881, RGB	
 	//msgbox, color(%check%)	
 	
 	// if enough mana, skip
@@ -67,8 +85,6 @@ LAlt & 5::
 	PixelGetColor, bottle2, 992,792, RGB	
 
 	Send {Shift Down}
-
-
 	
 	// if soulring in cd use bottle 1 or 2
 	if soulring1 = 0x1D1D24 
