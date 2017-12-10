@@ -12,7 +12,7 @@ The script is written in [**AutoHotkey**](https://autohotkey.com/download/) scri
 
 ### rightclick.ahk
 * `win` - pause/unpause the script + sound notification
-* `capslock` - remapped to "/" ()
+* `capslock` - remapped to "/" 
 * `b` - hold b then press left click (quick patrul)
 * `v` - hold v then press right click (quick directional move)
 * `alt + right click` - spam right click (pickup runes)
@@ -24,7 +24,7 @@ The next hotkeys should probably be in a different file, since I only use them f
 
 ### Known issues 
 * Mana abuse and courier resend works only on 1600x900 resolution.
-* T spammer sometimes fails to stop. (fixed by disabling and remapping the capslock)
+* T spammer sometimes fails to stop. (fixed by disabling and remapping capslock)
 * Fails to see an active soul ring because of the hover effect after rearm. (fixed by adding 200ms for double check)
 
 ### How mana abuse works ?
