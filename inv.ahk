@@ -11,7 +11,7 @@ delay()
 
 long_delay()
 {	  
-  Sleep, 100
+  Sleep, 150
 }
 
 use(key)
