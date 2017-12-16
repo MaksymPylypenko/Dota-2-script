@@ -9,6 +9,11 @@ delay()
   Sleep, delay
 }
 
+long_delay()
+{	  
+  Sleep, 100
+}
+
 use(key)
 {
   Send, {%key%}
@@ -19,31 +24,136 @@ use(key)
   Return
 }
 
-LAlt & q::  
-  Send, q
-  delay()
-  Send, q
-  delay()
-  Send, q
+
+LAlt & q::    
+  send("cold")
 return
+
 
 LAlt & w::  
-  Send, w
-  delay()
-  Send, w
-  delay()
-  Send, w
+  send("emp")
 return
 
+
 LAlt & e::  
-  Send, e
+  send("sun")
+return
+
+
+~q & LAlt::  
+  send("ice") 
+  send, r
+  long_delay()
+  send, d  
+return
+
+
+~w & LAlt::  
+  send("ghost_q") 
+  send, r
+  send, q 
+  long_delay()
+  send, d
+return
+
++w::  
+  send("ghost_w") 
+  send, r
+  send, w 
   delay()
-  Send, e
+  send, w 
+  long_delay()
+  send, d
+return
+
+~e & LAlt::  
+  send("alacrity") 
+  send, r
+  long_delay()
+  send {LAlt down}{d}{LAlt up}
+  send, e
   delay()
-  Send, e
+  send, e  
+  send, g
+return
+
 return
  
 
+send(ability)
+{
+  if ability = cold
+  {
+    Send, q
+    delay()
+    Send, q
+    delay()
+    Send, q
+  }
 
+  else if ability = emp
+  {
+    Send, w
+    delay()
+    Send, w
+    delay()
+    Send, w
+  }
+
+  else if ability = sun
+  {
+    Send, e
+    delay()
+    Send, e
+    delay()
+    Send, e
+  }
+
+  else if ability = alacrity
+  {
+    Send, w
+    delay()
+    Send, w
+    delay()
+    Send, e
+  }
+
+  else if ability = ghost_q
+  {
+    Send, w
+    delay()
+    Send, q
+    delay()
+    Send, q
+  }
+
+  else if ability = ghost_w
+  {
+    Send, q
+    delay()
+    Send, q
+    delay()
+    Send, w
+  }
+
+    else if ability = meteor
+  {
+    Send, w
+    delay()
+    Send, e
+    delay()
+    Send, e
+  }
+
+  else if ability = ice
+  {
+    Send, q
+    delay()
+    Send, q
+    delay()
+    Send, e
+  }
+  
+}
 
 

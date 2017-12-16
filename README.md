@@ -52,5 +52,9 @@ Additional scripts...
 * `[` - roshan text notification + sound notification in 4:50 minutes
 * `]` - reload
 
-### inv.ahk
-* `alt + q or w or e` - sends q/w/e 3 times with a random delay between 50 and 150 milliseconds 
+### inv.ahk 
+* `alt + q` or `w` or `e` - sends q/w/e 3 times with a random delay between 50 and 150 milliseconds 
+* `q + alt` - invoke and use ghost-walk, set remaining orbs to quas
+* `shift + q` - invoke and use ghost-walk, set remaining orbs to wex
+* `e + alt` - invoke and use alacrity, set remaining orbs to exort
+* `e + alt` - invoke and use ice-wall, set remaining orbs to exort
