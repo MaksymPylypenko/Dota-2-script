@@ -18,9 +18,10 @@ The script is written in [**AutoHotkey**](https://autohotkey.com/download/) scri
 * `alt + right click` - spam right click (pickup runes)
 * `alt + ~` - uses mouse to resend a courier to the next person
 
-The next hotkeys should probably be in a different file, since I only use them for tinker.
-* `alt + t` - spams t (rearm, blink out)
-* `alt + 5` - uses smart mana abuse (efficient mana regeneration on fontain)
+### tinker.ahk
+* `alt + t` - spams t. (rearm, blink out)
+* `alt + 5` - uses smart mana abuse. (efficient mana regeneration on fontain)
+* `alt + q or w or e` - uses ability and cancels a backswing animation. (interrupts ingame queue, do not press this after travels unless shift is hold )
 
 ### Known issues 
 * Mana abuse and courier resend works only on 1600x900 resolution.
@@ -54,7 +55,14 @@ Additional scripts...
 
 ### inv.ahk 
 * `alt + q` or `w` or `e` - sends q/w/e 3 times with a random delay between 50 and 150 milliseconds 
-* `q + alt` - invoke and use ghost-walk, set remaining orbs to quas
-* `shift + q` - invoke and use ghost-walk, set remaining orbs to wex
+* `shift + w` - invoke and use ghost-walk, set remaining orbs to wex
+* `w + alt` - invoke and use ghost-walk, set remaining orbs to quas
+* `q + alt` - invoke and use ice-wall, set remaining orbs to exort
 * `e + alt` - invoke and use alacrity, set remaining orbs to exort
-* `e + alt` - invoke and use ice-wall, set remaining orbs to exort
+
+### storm.ahk 
+* `q` uses q, cancels backswing animation, presses g (change this to your attack hotkey)
+* `r` uses r, presses g after 500 ms. (no need to press attack key after ult)
+
+### sf.ahk
+* `q or w or e` - directional move, then raze 
