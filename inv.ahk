@@ -71,9 +71,11 @@ return
   send, r
   long_delay()
   send {LAlt down}{d}{LAlt up}
+  delay()
   send, e
   delay()
   send, e  
+  delay()
   send, g
 return
 
