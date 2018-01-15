@@ -1,66 +1,46 @@
-﻿#NoEnv
-SendMode Input 
-SetWorkingDir %A_ScriptDir%  
+﻿#Include %A_ScriptDir%/utility.ahk
 #CommentFlag //
+
+// Key spammer, replace t with your blink hotkey
+LAlt & t::
+repeater("t","t") 
+return
 
 
 // Cancel backswing
 LAlt & q::    
-  Send, q 
-  Sleep, 650  
-  Send, g   
+  backswing("q", 650)
 return
-
 
 LAlt & w::  
-  Send, w 
-  Sleep, 100  
-  Send, g   
-return
-
+  backswing("w", 100)
 
 LAlt & e::  
-  Send, e 
-  Sleep, 650  
-  Send, g   
+  backswing("e", 650)
+return
+
+LAlt & r::  
 return
 
 
-// Key spammer
-LAlt & t::
-While GetKeyState("t","p")
-{
-	Send, t
-	Sleep, 10
-}
-return
+// Smart force-stuff
+d::
+forcestuff("x")
+return 
 
-
-// Directional move + alt click
-direct()
+// Custom combo
+f::
 {
-  Send, {v Down}
-  Send, {Click, R}  
-  Send, {v Up}     
-}
-
-v::    
-{
-	direct()	
-	Sleep, 200  	
-	PixelGetColor, temp, 1000, 800, RGB  
-	if temp = 0x523E11	
-		Send, !x
+	direct()
+	// Send, r
+	// Sleep, 1000
+	// Send, z
+	// Sleep, 400
+	// Send, z  
 }  
 return 
 
-~v & wheeldown::    
-{	
-	Send, !c	
-}  
-return 
-
-
+// Mana abuse
 // x1 = 950	   x2 = 1000	x3 = 1055	y1 = 800	y3 = 845	y3 = 880
 
 // Drop item 
@@ -241,4 +221,3 @@ LAlt & 5::
 	Skipper:
 	Send {Shift Up}
 return
-	
