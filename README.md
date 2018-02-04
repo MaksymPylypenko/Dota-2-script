@@ -4,9 +4,8 @@ An external dota 2 script for Windows.
 ## Getting Started
 The script is written in [**AutoHotkey**](https://autohotkey.com/download/) scripting language. You will need this to be installed to run and edit the script. 
 
-## Make sure:
-1. You keybord layout is set to ENG.
-2. The CAPSLOCK state is OFF.
+1. Make sure that your keybord layout is set to ENG.
+2. The CAPSLOCK state should be OFF.
 
 ### utility.ahk
 * `win` - pause/unpause the script + sound notification
