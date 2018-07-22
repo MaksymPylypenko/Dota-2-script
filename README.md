@@ -10,6 +10,7 @@ Open source Autohotkey script.
 2. Run an `.ahk` file.
 
 ## utility.ahk
+* To import, add `#Include %A_ScriptDir%/utility.ahk` at the top of your custom script.
 
 ### Functions 
 * repeater(key,host) - repeats the same key with a 50 ms delay.
