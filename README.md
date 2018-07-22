@@ -1,18 +1,23 @@
 # Dota-2-script
-An external dota 2 script for Windows.
+Open source Autohotkey script.
 
-## Getting Started
-The script is written in [**AutoHotkey**](https://autohotkey.com/download/) scripting language. You will need this to be installed to run and edit the script. 
+## Set-up
+* You can use **utility.ahk** as a starting point and create your own autohotkey script.
+* The config section (in utility.ahk) depends on your in-game hotkeys. The resolution of the screen also matters (deafault is 1600 x900), you might need to use Window Spy to find you locations on the screen.
 
-1. Make sure that your keybord layout is set to ENG.
-2. The CAPSLOCK state should be OFF.
+## Run
+1. Install [**AutoHotkey**](https://autohotkey.com/download/).
+2. Run an `.ahk` file.
 
 ### utility.ahk
-* `win` - pause/unpause the script + sound notification
-* `capslock` - remapped to `/` 
-* `alt + right click` - right click spammer (pickup runes)
-* `alt + t` - hotkey (t) spammer (shiftless blink)
-* `alt + ~` - uses mouse to resend a courier to the next person
+* `repeater(key,host)` - repeats the same key with a 50 ms delay.
+* `delay()` - creates a random delay between 50-150 ms.
+* `direct()` - rotates the hero using directional move.
+* `forcestuff(key)` - uses selfcast (alt+key)
+* `drag(x1,y1,x2,y2)` - uses cursor to drag item
+* `item(i)` - uses item (1-6)
+* `backpack(i)` - uses item from a backpack (1-3)
+
 
 ### tinker.ahk 
 * `alt + 5` - uses smart mana abuse. (efficient mana regeneration on fontain)
@@ -33,30 +38,3 @@ When sufficient information is collected it decides what to do depending on the 
 3. IF not enough mana, no soulring, no bottle, THEN drop 1,2,3,6, use soulring and bottle from backpack, pickup 1,2,3,6, use rearm
 
 <a href='https://photos.google.com/share/AF1QipPHxg-puAPJUO4gUxWpQhmGcjgR3DW2WUMQ-ydxDNFzCVrodZS2yP8ufrPkKSnCpA?key=c2tEOTlELWNOdTRWeXN3TnlOSXpLSS1Wc3NxQjJR&source=ctrlq.org'><img src='https://lh3.googleusercontent.com/HOzm8Ji4t_5QGFLn5FvFzdZl5bApNQkJY60Or09EoDvoTuctVSLxTHXTvgoKEUkdaR3UqKbNtD6b3DnQBxPKLsMbN0cPwgaSKo9dhTh6LM2o13S-SKXIJjb4-vuyp-wJ9KsEadney8A' /></a>
-
-## Known issues 
-* Mana abuse and courier resend works only on 1600x900 resolution.
-* T spammer sometimes fails to stop. (fixed by disabling and remapping the capslock)
-* Fails to see an active soul ring because of the hover effect after rearm. (fixed by adding 200ms for double check)
-
-## Under development 
-Additional scripts... 
-
-### timer.ahk
-* `p` - glyph text notification + sound notification in 4:50 minutes
-* `[` - roshan text notification + sound notification in 4:50 minutes
-* `]` - reload
-
-### inv.ahk 
-* `alt + q` or `w` or `e` - sends q/w/e 3 times with a random delay between 50 and 150 milliseconds 
-* `shift + w` - invoke and use ghost-walk, set remaining orbs to wex
-* `w + alt` - invoke and use ghost-walk, set remaining orbs to quas
-* `q + alt` - invoke and use ice-wall, set remaining orbs to exort
-* `e + alt` - invoke and use alacrity, set remaining orbs to exort
-
-### storm.ahk 
-* `q` uses q, cancels backswing animation, presses g (change this to your attack hotkey)
-* `r` uses r, presses g after 500 ms. (no need to press attack key after ult)
-
-### sf.ahk
-* `q or w or e` - directional move, then raze 
