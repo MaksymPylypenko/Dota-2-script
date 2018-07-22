@@ -10,13 +10,23 @@ Open source Autohotkey script.
 2. Run an `.ahk` file.
 
 ### utility.ahk
-* `repeater(key,host)` - repeats the same key with a 50 ms delay.
-* `delay()` - creates a random delay between 50-150 ms.
-* `direct()` - rotates the hero using directional move.
-* `forcestuff(key)` - uses selfcast (alt+key)
-* `drag(x1,y1,x2,y2)` - uses cursor to drag item
-* `item(i)` - uses item (1-6)
-* `backpack(i)` - uses item from a backpack (1-3)
+
+1. Functions 
+* repeater(key,host) - repeats the same key with a 50 ms delay.
+* delay() - creates a random delay between 50-150 ms.
+* direct() - rotates the hero using directional move.
+* forcestuff(key) - uses selfcast (alt+key).
+* drag(x1,y1,x2,y2) - uses cursor to drag item.
+* dragr(x1,y1,x2,y2) - uses cursor to drag item (reversed).
+* item(i) - uses item (1-6).
+* backpack(i) - uses item from a backpack (1-3).
+
+2. Default Hot-keys
+* `LWin` - pause / unpause the script.
+* `CapsLock` - remmaped to `/`. Can be used as an extra hotkey.
+* `alt + ~` - resend courier to the next available teamate.
+* `alt + RightClick (hold)` - right click spammer.
+* `alt + z or x` - uses item from backpack (switch, use, switch back).
 
 
 ### tinker.ahk 
