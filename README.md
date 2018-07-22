@@ -2,7 +2,7 @@
 Open source Autohotkey script.
 
 ## Set-up
-* You can use **utility.ahk** as a starting point of creating your own autohotkey script.
+* You can use **utility.ahk** as a starting point for creating your own autohotkey script.
 * The config section (see utility.ahk) depends on your in-game hotkeys. The resolution of the screen also matters (deafault is 1600 x 900), you might need to use Window Spy to find your own locations on the screen.
 
 ## Run
