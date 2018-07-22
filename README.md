@@ -37,7 +37,7 @@ Open source Autohotkey script.
 
 
 ## sf.ahk 
-* `alt + q ` - rotates the hero and uses raze (usefull when standing near edges)
+* `alt + q/w/e ` - rotates the hero and uses raze (usefull when standing near edges)
 
 <a href='https://photos.google.com/share/AF1QipOaeWFNBmnsrGPRVVeBfvAHFLoG3BEPnL8deRxEz6tjUJ2gMzO_HlnzdWzvh_5gag?key=Rk4wUEpIcTQ5OFZmSGtXY2xibURGemRnNXhZWmJR'/><img src='https://lh3.googleusercontent.com/D3KiasiCK-EDmF9-cTGhRNxtj-moqzE6sfrHSQAfuFFP4XDNCB1lMLjEI4R-S6usJB_UTceTpaFE9Rc2cF30kd6aXHIrRrFXjlH6ZhPndKKJIOlmH-wtLccBJojQr0fGZQiKKA58Uw6esEMqmiGEV3YRIE91rNJ-59sqLEgbqsWBtB3yJSygAFcxRnfYspVr-K6_bLM-cSeZ6-gORIGJDas_Avgd0ueHz01GmElNP232jmhlNriaC_f7lLcRA9KsRFXnnpMDFLwnTYrh61uT9DDYP3ijXM_betTzZp1A7qWcoE6u_B2lsmeMlxVRGBdzAe6TB8Z85ZjPEwWRyeM1CNqKSEm8fdufOtZNj9Vi2eHYR0lUoq36JJexrZNh5255VUoH14RMbuYowQVPRqK8BuHxVHbEZ3VCgB_vQkW8XMrc-oD-M1rZ4vKghPKD90IKbQ88UvHzPnjSuhTpDKFwrqj0g8hQtMDl-fpLPIQdufybLe2AAKSrhvEXU-smnrVXwBNC3hmFK2BlBnsBD9TNo6xZZn3j6yjghI5m-ZFHqSxURCgS-tOu0ZQ3hRJGNVCkD4BTgF6u60FvRAUE7RKSzjdEk407J1oshlU2qC8z1d3WuzVqzlY_9LQDkiE4N2aEeQ3vN326BiBGk2K48yzuVxYs-050N1_SIw=w1364-h767-no' /></a>
 
