@@ -9,9 +9,9 @@ Open source Autohotkey script.
 1. Install [**AutoHotkey**](https://autohotkey.com/download/).
 2. Run an `.ahk` file.
 
-### utility.ahk
+## utility.ahk
 
-1. Functions 
+### Functions 
 * repeater(key,host) - repeats the same key with a 50 ms delay.
 * delay() - creates a random delay between 50-150 ms.
 * direct() - rotates the hero using directional move.
@@ -21,7 +21,7 @@ Open source Autohotkey script.
 * item(i) - uses item (1-6).
 * backpack(i) - uses item from a backpack (1-3).
 
-2. Default Hot-keys
+### Default Hot-keys
 * `LWin` - pause / unpause the script.
 * `CapsLock` - remmaped to `/`. Can be used as an extra hotkey.
 * `alt + ~` - resend courier to the next available teamate.
@@ -29,7 +29,7 @@ Open source Autohotkey script.
 * `alt + z or x` - uses item from backpack (switch, use, switch back).
 
 
-### tinker.ahk 
+## tinker.ahk 
 * `alt + 5` - uses smart mana abuse. (efficient mana regeneration on fontain)
 
 The script checks your items (1,2,6) and mana status (above 75% or not) by checking the color of pixels in appropriate points on your screen. 
