@@ -29,8 +29,10 @@ Open source Autohotkey script.
 * `alt + z or x` - uses item from backpack (switch, use, switch back).
 
 ## earth.ahk 
-* `alt + w` - does boulder and rolling using 1 stone only
-<a href='https://photos.google.com/share/AF1QipM8nC1isaOdMMlGHSjo88Px1PB5M1THSoTuINmtbAm3NNHSegNHH_GVnNDj9CCp8A?key=dlFGSDhidFUxUnVsQjRRVFZNQV96ZU1Ka1BLWFJR'/></a>
+* `alt + w` - does boulder (q) and rolling (w) using 1 stone only
+
+<a href='https://photos.google.com/share/AF1QipM8nC1isaOdMMlGHSjo88Px1PB5M1THSoTuINmtbAm3NNHSegNHH_GVnNDj9CCp8A?key=dlFGSDhidFUxUnVsQjRRVFZNQV96ZU1Ka1BLWFJR'/><img src='https://lh3.googleusercontent.com/F8ax7MZDXmUAtYzHfyWWTO7B47j4_yoDumuIlCqyAfF6AQVibhe5z9wd5B4ybFTawIXXsVSBpg3vadq6KnIlhSqODRVoUVX4GfPknTgjfI02C71VXu7CNhaf4r6XHJPJyyCWvrAdYN7YuxqQ3c2GNBYNwtEm4-yeRKoJqIVBKROE-YN2_tYdTsNuiKIF8lYXKehtQ0vyGcUNbgwD0q3n8l1O5eZsD7c5uvnIXRWSeVzYxEJxp3HXQJKrtzWyDssTIIRjXML-1_M5ZQZvidsLlp188Q5OBAZyTVWf-KCCALCGBoxKKCTa7tElGRPyYgirdnxwT1eAQT9PfV4zC7208oLKQcwqxUeyGm4YvpiZ2b_ZImb7_ibMgTzJdo_jZhpI8Mz2Bu73R7bHtVPwi_2WAiemuTQ404Fd_btl8ciaC06TcBDUWPnK08Rd0drAeTzJij3HKzR41U_tKkOs5t2bl3YGV5vgJQuAIswYtTQU96m3i7zY2QeK38IxWK8nHzuAiJ6dWs0uQ10yoq6qlpgZZQcTwMFMq2-lgs_p-XBpULplD9S1xKcYKiT4pq0qdiRxWxEbe0GNVkphXWuac8XCjrV9jHaXTd_8VaNq9QCm0pBUvD0J6St-rB0owzspaPqUrVQl56kkrUa2rRfANT6oVGn4Mg2SWrVe_A=w1364-h767-no' /></a>
+
 ## tinker.ahk 
 * `alt + 5` - uses smart mana abuse. (efficient mana regeneration on fontain)
 
