@@ -28,7 +28,9 @@ Open source Autohotkey script.
 * `alt + RightClick (hold)` - right click spammer.
 * `alt + z or x` - uses item from backpack (switch, use, switch back).
 
-
+## earth.ahk 
+* `alt + w` - does boulder and rolling using 1 stone only
+<a href='https://photos.google.com/share/AF1QipM8nC1isaOdMMlGHSjo88Px1PB5M1THSoTuINmtbAm3NNHSegNHH_GVnNDj9CCp8A?key=dlFGSDhidFUxUnVsQjRRVFZNQV96ZU1Ka1BLWFJR'/></a>
 ## tinker.ahk 
 * `alt + 5` - uses smart mana abuse. (efficient mana regeneration on fontain)
 
