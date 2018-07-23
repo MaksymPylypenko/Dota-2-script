@@ -20,14 +20,14 @@ Open source Autohotkey script.
 * drag(x1,y1,x2,y2) - uses cursor to drag item.
 * dragr(x1,y1,x2,y2) - uses cursor to drag item (reversed).
 * item(i) - uses item (1-6).
-* backpack(i) - uses item from a backpack (1-3).
+* backpack(i) - uses an item from a backpack (1-3).
 
 ### Default Hot-keys
 * `LWin` - pause / unpause the script.
 * `CapsLock` - remmaped to `/`. Can be used as an extra hotkey.
 * `alt + ~` - resend courier to the next available teamate.
 * `alt + RightClick (hold)` - right click spammer.
-* `alt + z or x` - uses item from a backpack (switch, use, switch back).
+* `alt + z or x` - use item from a backpack (switch, use, switch back).
 
 
 ## earth.ahk 
