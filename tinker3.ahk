@@ -122,11 +122,13 @@ LAlt & f::
 	}
 	
 	; now we can pickup 
-	loop, 5
+	loop, 4
 	{		
-		Click, x, y, right       
-		Sleep, 60		
-	}		
+		Click, right       
+		Sleep, 60			
+		x+=15
+		mousemove x,y
+	}			
 }
 return
 
@@ -157,7 +159,9 @@ drop(i)
     else if i = 6
 	{	
 		drag(x3,y2,x,y)
-	}		
+	}	
+	;y-=15
+	x-=15
 }
 
 
