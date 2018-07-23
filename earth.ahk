@@ -1,38 +1,17 @@
 ﻿#Include %A_ScriptDir%/utility.ahk
-#CommentFlag //
 
-
-// aghs
-// LAlt & f::  
-  // Send, d
-  // Sleep, 50
-  // Send, e  
-  // Send, f
-  // Send, w  
-  // Sleep, 600 
-  // Send, q
-// return
-
-// silence
-LAlt & e::  
-  Send, d
-  Sleep, 50
-  Send, e  
-  Reload
-return
-
-// invisible stone
+; invisible stone
 LAlt & w::  
   Send, w
   Send, !d
-  Sleep, 575 // 600
+  Sleep, 575 ; 600
   Send, q
   Reload
 return
   
- // stun
+; stun
 LAlt & q::
-  Sleep, 10 // blink delay
+  Sleep, 50 ; blink delay to avoid selfcast bug 
   Send, !d
   Sleep, 50
   Send, q   
@@ -40,8 +19,9 @@ LAlt & q::
 return
 
 
-// self stone... still  doesn't work 
-d()
+; the true self cast
+; doesn't solve the problem...
+iconCast()
 {
 	mousegetpos,x,y	
 	mousemove, 560,820	
