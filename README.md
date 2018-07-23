@@ -27,7 +27,7 @@ Open source Autohotkey script.
 * `CapsLock` - remmaped to `/`. Can be used as an extra hotkey.
 * `alt + ~` - resend courier to the next available teamate.
 * `alt + RightClick (hold)` - right click spammer.
-* `alt + z or x` - uses item from backpack (switch, use, switch back).
+* `alt + z or x` - uses item from a backpack (switch, use, switch back).
 
 
 ## earth.ahk 
