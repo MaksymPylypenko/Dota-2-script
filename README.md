@@ -8,7 +8,7 @@ Open source Autohotkey script.
 
 ## Run
 1. Install [**AutoHotkey**](https://autohotkey.com/download/).
-2. Run `utility.ahk`.
+2. Run **utility.ahk**.
 
 * `LWin` - pause / unpause the script.
 * `alt + RightClick (hold)` - right click spammer.
