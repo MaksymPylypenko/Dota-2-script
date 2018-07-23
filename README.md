@@ -50,12 +50,12 @@ There are also  item( i ) and ability ( i ) for convinience. They simply use an 
 
 ### earth.ahk 
 * `alt + q` - blink-safe boulder smash (prevents placing a stone in a previous location).
-* `alt + w` - does boulder (q) and rolling (w) using 1 stone only.
+* `alt + w` - boulder (q) and rolling (w) using 1 stone only.
 
 <a href='https://photos.google.com/share/AF1QipM8nC1isaOdMMlGHSjo88Px1PB5M1THSoTuINmtbAm3NNHSegNHH_GVnNDj9CCp8A?key=dlFGSDhidFUxUnVsQjRRVFZNQV96ZU1Ka1BLWFJR'/><img src='https://lh3.googleusercontent.com/F8ax7MZDXmUAtYzHfyWWTO7B47j4_yoDumuIlCqyAfF6AQVibhe5z9wd5B4ybFTawIXXsVSBpg3vadq6KnIlhSqODRVoUVX4GfPknTgjfI02C71VXu7CNhaf4r6XHJPJyyCWvrAdYN7YuxqQ3c2GNBYNwtEm4-yeRKoJqIVBKROE-YN2_tYdTsNuiKIF8lYXKehtQ0vyGcUNbgwD0q3n8l1O5eZsD7c5uvnIXRWSeVzYxEJxp3HXQJKrtzWyDssTIIRjXML-1_M5ZQZvidsLlp188Q5OBAZyTVWf-KCCALCGBoxKKCTa7tElGRPyYgirdnxwT1eAQT9PfV4zC7208oLKQcwqxUeyGm4YvpiZ2b_ZImb7_ibMgTzJdo_jZhpI8Mz2Bu73R7bHtVPwi_2WAiemuTQ404Fd_btl8ciaC06TcBDUWPnK08Rd0drAeTzJij3HKzR41U_tKkOs5t2bl3YGV5vgJQuAIswYtTQU96m3i7zY2QeK38IxWK8nHzuAiJ6dWs0uQ10yoq6qlpgZZQcTwMFMq2-lgs_p-XBpULplD9S1xKcYKiT4pq0qdiRxWxEbe0GNVkphXWuac8XCjrV9jHaXTd_8VaNq9QCm0pBUvD0J6St-rB0owzspaPqUrVQl56kkrUa2rRfANT6oVGn4Mg2SWrVe_A=w1364-h767-no' /></a>
 
 ## sf.ahk 
-* `alt + q/w/e ` - rotates the hero and uses raze (usefull when standing near edges).
+* `q/w/e` - rotate the hero and use raze (usefull when standing near edges).
 
 <a href='https://photos.google.com/share/AF1QipOaeWFNBmnsrGPRVVeBfvAHFLoG3BEPnL8deRxEz6tjUJ2gMzO_HlnzdWzvh_5gag?key=Rk4wUEpIcTQ5OFZmSGtXY2xibURGemRnNXhZWmJR'/><img src='https://lh3.googleusercontent.com/D3KiasiCK-EDmF9-cTGhRNxtj-moqzE6sfrHSQAfuFFP4XDNCB1lMLjEI4R-S6usJB_UTceTpaFE9Rc2cF30kd6aXHIrRrFXjlH6ZhPndKKJIOlmH-wtLccBJojQr0fGZQiKKA58Uw6esEMqmiGEV3YRIE91rNJ-59sqLEgbqsWBtB3yJSygAFcxRnfYspVr-K6_bLM-cSeZ6-gORIGJDas_Avgd0ueHz01GmElNP232jmhlNriaC_f7lLcRA9KsRFXnnpMDFLwnTYrh61uT9DDYP3ijXM_betTzZp1A7qWcoE6u_B2lsmeMlxVRGBdzAe6TB8Z85ZjPEwWRyeM1CNqKSEm8fdufOtZNj9Vi2eHYR0lUoq36JJexrZNh5255VUoH14RMbuYowQVPRqK8BuHxVHbEZ3VCgB_vQkW8XMrc-oD-M1rZ4vKghPKD90IKbQ88UvHzPnjSuhTpDKFwrqj0g8hQtMDl-fpLPIQdufybLe2AAKSrhvEXU-smnrVXwBNC3hmFK2BlBnsBD9TNo6xZZn3j6yjghI5m-ZFHqSxURCgS-tOu0ZQ3hRJGNVCkD4BTgF6u60FvRAUE7RKSzjdEk407J1oshlU2qC8z1d3WuzVqzlY_9LQDkiE4N2aEeQ3vN326BiBGk2K48yzuVxYs-050N1_SIw=w1364-h767-no' /></a>
 
@@ -63,7 +63,7 @@ There are also  item( i ) and ability ( i ) for convinience. They simply use an 
 ## tinker3.ahk
 Requires proper coordinates!
 
-* `alt + d` - drops items (shift queue during rearm). 
+* `alt + d` - drop items (shift queue during rearm). 
   * find bottle and use it.
   * drop everything that gives you mana.
 * `alt + f` - pickup items (after rearm).
