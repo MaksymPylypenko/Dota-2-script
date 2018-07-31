@@ -21,21 +21,27 @@ LAlt & d::
 	; find bottle and use it 		
 	bottleIndex = -1
 	
-	; you might need to use WindowSpy to find your own coordinates and colour unless it is 1600 x 900	
+	; you might need to use WindowSpy to find your own coordinates and colour 
 	; check the colour of a red pixel, it is the same for both empty and full bottle states
 	
-	PixelGetColor, bottle6, 1045,835, RGB 	
-	PixelGetColor, bottle2, 992,792, RGB  	
-	; Msgbox, "%bottle2%" 
+	
+	; PixelGetColor, bottle6, 1045,835, RGB 	; 1600 x 900	
+	; PixelGetColor, bottle2, 992,792, RGB  	; 1600 x 900	
+	
+	PixelGetColor, bottle6, 1258,1003, RGB 	; 1920x1080   	
+	PixelGetColor, bottle2, 1193,951, RGB  	; 1920x1080   
+	;Msgbox, "%bottle6%" 
 		
 	; assuming that you always buy a bottle, it will either be in one of the available slots
 			
-	if bottle2 = 0xB21211 
+	;if bottle2 = 0xB21211 ; 1600 x 900
+	if bottle2 = 0x960F0B ; 1920x1080   
 	{
 		item(2)
 		bottleIndex = 2
 	}
-	if bottle6 = 0x640B0C
+	;if bottle6 = 0x640B0C ; 1600 x 900
+	if bottle6 = 0x533135 ; 1920x1080
 	{
 		item(6)
 		bottleIndex = 6
@@ -50,22 +56,27 @@ LAlt & d::
 	; what about soul-ring... 
 	soulringIndex = -1
 	
-	PixelGetColor, soulring1, 938,793, RGB	
-	;Msgbox, "%soulring1%"
+	;PixelGetColor, soulring1, 938,793, RGB	; 1600 x 900
+	PixelGetColor, soulring1, 1129, 952, RGB	; 1920x1080	
+	;Msgbox, "%soulring1%"  
 	
-	if soulring1 = 0x1D1D24 ; cool-down
+	;if soulring1 = 0x1D1D24 ; cool-down ; 1600 x 900
+	if soulring1 = 0x27272F ; cool-down ; 1920x1080	
 	{		
 		soulringIndex = 1
 	}	
-	else if soulring1 = 0x49486A ; active
+	;else if soulring1 = 0x49486A ; active ; 1600 x 900
+	else if soulring1 = 0x4A4A6D ; active ; 1920x1080	
 	{		
 		soulringIndex = 1 
 	}	
 	else ; need an extra check.. active soulring might have a hover effect
 	{
 		Sleep, 100
-		PixelGetColor, soulring1, 938,793, RGB	
-		if soulring1 = 0x49486A
+		;PixelGetColor, soulring1, 938,793, RGB	; 1600 x 900
+		PixelGetColor, soulring1, 1129, 952, RGB	; 1920x1080	
+		;if soulring1 = 0x49486A ; active ; 1600 x 900
+		if soulring1 = 0x4A4A6D ; active ; 1920x1080	
 		{
 			soulringIndex = 1 
 		}

@@ -25,14 +25,22 @@ global ability6 = "r"
 global directional_move = "v"
 
 ; Use Window Spy to find your coordinates
-; This is valid for 1600 x 900 only 
 
-global x1 = 950	   	; 1st column
-global x2 = 1000	; 2nd column
-global x3 = 1055	; 3d column
-global y1 = 800	   	; 1st row - items
-global y2 = 845	   	; 2nd row - items
-global y3 = 880     ; 3d row - backpack	  
+; 1600 x 900
+; global x1 = 950	   	; 1st column
+; global x2 = 1000	; 2nd column
+; global x3 = 1055	; 3d column
+; global y1 = 800	   	; 1st row - items
+; global y2 = 845	   	; 2nd row - items
+; global y3 = 880     ; 3d row - backpack	  
+
+; 1920 x 1080
+global x1 = 1194	; 1st column
+global x2 = 1206	; 2nd column
+global x3 = 1270	; 3d column
+global y1 = 968   	; 1st row - items
+global y2 = 1014	; 2nd row - items
+global y3 = 1055    ; 3d row - backpack	  
 
 
 ; Functions
@@ -178,11 +186,6 @@ return
 ; Right click spammer (50ms delay)
 LAlt & ~RButton::  
 	repeater("RButton","RButton")
-	; While GetKeyState("RButton","RButton")
-    ; {
-        ; Send, {%key%}
-        ; Sleep, 50
-    ; }
 return
 
 
@@ -191,13 +194,24 @@ return
 LAlt & `::
 {
 	mousegetpos,x,y
-	Click, right, 1514, 875 ; coordinates of the courier icon 
-	MouseMove, 1514, 816  ; coordinates of the 1st ally 
+	
+	; Click on the courier icon 
+	
+	;Click, right, 1514, 875 ; 1680x900		
+	Click, right, 1890, 1500 ; 1920x1080   
+	
+	; Check coordinates of the 1st ally 
+	
+	;MouseMove, 1514, 816  	; 1680x900		
+	MouseMove, 1890, 968 	; 1920x1080   
 	Sleep, 250
-	PixelGetColor, check, 1514, 816, RGB	
+	
+	;PixelGetColor, check, 1514, 816, RGB ; 1680x900	
+	PixelGetColor, check, 1890, 968, RGB ; 1920x1080   		
 	if check != 0xEAE9E91
 	{
-		Click, 1514, 816
+		;Click, 1514, 816 ; 1680x900	
+		Click, 1890, 968 ; 1920x1080  
 	}	
 	mousemove,%x%,%y%
 }
