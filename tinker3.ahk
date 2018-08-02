@@ -6,6 +6,32 @@ global soulringIndex
 global bottleIndex
 
 
+; Config 
+;=======================================================================
+
+; 1600 x 900
+; global bottle2C = 0xB21211
+; global bottle2X = 992
+; global bottle2Y = 792
+; global bottle6C = 0x640B0C
+; global bottle6X = 1045
+; global bottle6Y = 835
+; global soulring1C = 0x49486A
+; global soulring1X = 938
+; global soulring1Y = 793
+
+; 1920 x 1080
+; global bottle2C = 0x960F0B
+; global bottle2X = 1193
+; global bottle2Y = 951
+; global bottle6C = 0x533135
+; global bottle6X = 1258
+; global bottle6Y = 1003
+; global soulring1C = 0x27272F
+; global soulring1X = 1129
+; global soulring1Y = 952
+
+
 ; Blink spammer, replace t with your blink hotkey
 LAlt & t::
 	repeater("t","t") 
@@ -15,7 +41,7 @@ return
 ; Drop items during rearm
 LAlt & d::
 {
-	; Send {Shift Down}
+	Send {Shift Down}
 	mousegetpos,x,y	; save mouse position
 	
 	; find bottle and use it 		
@@ -29,7 +55,9 @@ LAlt & d::
 	; PixelGetColor, bottle2, 992,792, RGB  	; 1600 x 900	
 	
 	PixelGetColor, bottle6, 1258,1003, RGB 	; 1920x1080   	
-	PixelGetColor, bottle2, 1193,951, RGB  	; 1920x1080   
+	PixelGetColor, bottle2, 1193,951, RGB  	; 1920x1080 
+
+	;PixelGetColor, bottle6, %bottle6X%,%bottle6Y%, RGB 	; 1920x1080   		
 	;Msgbox, "%bottle6%" 
 		
 	; assuming that you always buy a bottle, it will either be in one of the available slots
@@ -85,6 +113,8 @@ LAlt & d::
 	; now we can rearm
 	rearm()	
 	
+	;Sleep, 200 
+	
 	; assuming that slot 4-blink ,5-travels
 	; drop any item that gives mana (last item first!) 	
 	if bottleIndex != 6
@@ -104,7 +134,7 @@ LAlt & d::
 		drop(1)
 	}		
 			
-	; Send {Shift Up}	
+	Send {Shift Up}	
 } 
 return
   

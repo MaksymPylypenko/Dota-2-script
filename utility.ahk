@@ -35,7 +35,7 @@ global directional_move = "v"
 ; global y3 = 880     ; 3d row - backpack	  
 
 ; 1920 x 1080
-global x1 = 1194	; 1st column
+global x1 = 1142	; 1st column
 global x2 = 1206	; 2nd column
 global x3 = 1270	; 3d column
 global y1 = 968   	; 1st row - items
@@ -77,11 +77,13 @@ direct()
 ; Drag item
 drag(x1,y1,x2,y2)
 { 		
-	SendEvent {Click %x1%, %y1%, down}{click %x2%, %y2%, up} 
+	;Sleep,200
+	SendEvent {Click %x1%, %y1%, down}{click %x2%, %y2%, up}	
 }
 dragr(x2,y2,x1,y1)
 { 		
-	SendEvent {Click %x1%, %y1%, down}{click %x2%, %y2%, up} ; reversed
+	;Sleep,200
+	SendEvent {Click %x1%, %y1%, down}{click %x2%, %y2%, up} ; reversed	
 }
 
 
@@ -186,6 +188,30 @@ return
 ; Right click spammer (50ms delay)
 LAlt & ~RButton::  
 	repeater("RButton","RButton")
+return
+
+
+; Use item from backpack
+LAlt & x::
+{
+	backpackL(2)
+}
+return
+LAlt & z::
+{
+	backpackL(1)
+}
+return
+
+
+; Switch item to backpack and back 
+LAlt & c::
+{
+	mousegetpos,x,y
+	drag(x3,y2,x3,y3)
+	dragr(x3,y2,x3,y3)
+	mousemove,%x%,%y%
+}
 return
 
 
