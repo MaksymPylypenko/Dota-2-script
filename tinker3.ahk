@@ -9,27 +9,44 @@ global bottleIndex
 ; Config 
 ;=======================================================================
 
-; 1600 x 900
-; global bottle2C = 0xB21211
-; global bottle2X = 992
-; global bottle2Y = 792
-; global bottle6C = 0x640B0C
-; global bottle6X = 1045
-; global bottle6Y = 835
-; global soulring1C = 0x49486A
-; global soulring1X = 938
-; global soulring1Y = 793
+; You might need to use WindowSpy to find your own coordinates and colour
+; They depend on your resolution and rendering API 
 
-; 1920 x 1080
-; global bottle2C = 0x960F0B
-; global bottle2X = 1193
-; global bottle2Y = 951
-; global bottle6C = 0x533135
-; global bottle6X = 1258
-; global bottle6Y = 1003
-; global soulring1C = 0x27272F
-; global soulring1X = 1129
-; global soulring1Y = 952
+Set1920x1080(void)
+{
+	global			
+	soulring1X := 1129
+	soulring1Y := 952
+	soulring1C_cool_down := 0x27272F
+	soulring1C_active := 0x4A4A6D	
+	bottle2X := 1193
+	bottle2Y := 951
+	bottle2C := 0x960F0B
+	bottle6X := 1258
+	bottle6Y := 1003
+	bottle6C := 0x533135
+	return
+}
+
+Set1600x900(void)
+{
+	global	
+	soulring1X := 938
+	soulring1Y := 793
+	soulring1C_cool_down := 0x1D1D24
+	soulring1C_active := 0x49486A
+	bottle2X := 992
+	bottle2Y := 792
+	bottle2C := 0xB21211
+	bottle6X := 1045
+	bottle6Y := 835
+	bottle6C := 0x640B0C
+	return
+}
+
+
+; Hotkeys 
+;=======================================================================
 
 
 ; Blink spammer, replace t with your blink hotkey
@@ -41,81 +58,67 @@ return
 ; Drop items during rearm
 LAlt & d::
 {
+	Set1920x1080(void)
+	
 	Send {Shift Down}
 	mousegetpos,x,y	; save mouse position
 	
 	; find bottle and use it 		
-	bottleIndex = -1
+	bottleIndex = -1	
 	
-	; you might need to use WindowSpy to find your own coordinates and colour 
-	; check the colour of a red pixel, it is the same for both empty and full bottle states
-	
-	
-	; PixelGetColor, bottle6, 1045,835, RGB 	; 1600 x 900	
-	; PixelGetColor, bottle2, 992,792, RGB  	; 1600 x 900	
-	
-	PixelGetColor, bottle6, 1258,1003, RGB 	; 1920x1080   	
-	PixelGetColor, bottle2, 1193,951, RGB  	; 1920x1080 
-
-	;PixelGetColor, bottle6, %bottle6X%,%bottle6Y%, RGB 	; 1920x1080   		
+	; check the colour of a red pixel, it is the same for both empty and full bottle states		
+	PixelGetColor, bottle6, bottle6X,bottle6Y, RGB 	
+	PixelGetColor, bottle2, bottle2X,bottle2Y, RGB 		
 	;Msgbox, "%bottle6%" 
 		
-	; assuming that you always buy a bottle, it will either be in one of the available slots
-			
-	;if bottle2 = 0xB21211 ; 1600 x 900
-	if bottle2 = 0x960F0B ; 1920x1080   
+	; I assume there are 2 possible positions for a bottle 	
+	if bottle2 = %bottle2C%
 	{
 		item(2)
 		bottleIndex = 2
 	}
-	;if bottle6 = 0x640B0C ; 1600 x 900
-	if bottle6 = 0x533135 ; 1920x1080
+	
+	if bottle6 = %bottle6C%
 	{
 		item(6)
 		bottleIndex = 6
 	}	
 	
-	; or in backpack
+	; otherwise it is in backpack
 	if bottleIndex = -1 
 	{
 		backpackL(2)
 	}
 	
-	; what about soul-ring... 
+	; what about soul-ring?
 	soulringIndex = -1
+		
+	PixelGetColor, soulring1, soulring1X,soulring1Y, RGB 	
+	;Msgbox, "%soulring1%"  		
 	
-	;PixelGetColor, soulring1, 938,793, RGB	; 1600 x 900
-	PixelGetColor, soulring1, 1129, 952, RGB	; 1920x1080	
-	;Msgbox, "%soulring1%"  
-	
-	;if soulring1 = 0x1D1D24 ; cool-down ; 1600 x 900
-	if soulring1 = 0x27272F ; cool-down ; 1920x1080	
+	if soulring1 = %soulring1C_cool_down%
 	{		
 		soulringIndex = 1
-	}	
-	;else if soulring1 = 0x49486A ; active ; 1600 x 900
-	else if soulring1 = 0x4A4A6D ; active ; 1920x1080	
+	}		
+	else if soulring1 = %soulring1C_active%
 	{		
 		soulringIndex = 1 
 	}	
 	else ; need an extra check.. active soulring might have a hover effect
 	{
-		Sleep, 100
-		;PixelGetColor, soulring1, 938,793, RGB	; 1600 x 900
-		PixelGetColor, soulring1, 1129, 952, RGB	; 1920x1080	
-		;if soulring1 = 0x49486A ; active ; 1600 x 900
-		if soulring1 = 0x4A4A6D ; active ; 1920x1080	
+		Sleep, 100		
+		PixelGetColor, soulring1, soulring1X, soulring1Y, RGB 	
+		
+		if soulring1 = soulring1C_active		
 		{
 			soulringIndex = 1 
 		}
 	}
 	
 	; now we can rearm
-	rearm()	
-	
-	;Sleep, 200 
-	
-	; assuming that slot 4-blink ,5-travels
+	ability(6)
+		
+	; I assume that 2 slot are never used (e.g. 4-blink ,5-travels)
 	; drop any item that gives mana (last item first!) 	
 	if bottleIndex != 6
 	{
@@ -163,7 +166,7 @@ LAlt & f::
 	}
 	
 	; now we can pickup 
-	loop, 4
+	loop, 5
 	{		
 		Click, right       
 		Sleep, 60			
@@ -174,7 +177,11 @@ LAlt & f::
 return
 
 
-; drop an item
+
+; Functions
+;=======================================================================
+
+ ; drop an item
 drop(i)
 {
 	if i = 1
@@ -203,12 +210,4 @@ drop(i)
 	}	
 	;y-=15
 	x-=15
-}
-
-
-; Need to consider cast animation as well
-rearm()
-{
-    ;Sleep, 100
-    Send, r 	;change this to your ultimate hotkey
 }
