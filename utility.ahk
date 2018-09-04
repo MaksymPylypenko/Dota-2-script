@@ -52,7 +52,7 @@ repeater(key, host)
     While GetKeyState(host,"p")
     {
         Send, {%key%}
-        Sleep, 50
+        Sleep, 10
     }    
 }
 
@@ -181,38 +181,22 @@ CapsLock:: /
 ; Pause / Unpause Script
 LWin::  
 	suspend
-	SoundPlay, sounds/scan.mp3
+	;SoundPlay, sounds/scan.mp3
 return
 
 
 ; Right click spammer (50ms delay)
-LAlt & ~RButton::  
-	repeater("RButton","RButton")
+LAlt & h::  
+	; repeater("RButton","RButton")	
+	While GetKeyState("h","p")
+    {
+        Send, {RButton}
+        Sleep, 10		
+    }    
+	; Send, {LAlt Down}
+	; Send, {LAlt Up}
 return
 
-
-; Use item from backpack
-LAlt & x::
-{
-	backpackL(2)
-}
-return
-LAlt & z::
-{
-	backpackL(1)
-}
-return
-
-
-; Switch item to backpack and back 
-LAlt & c::
-{
-	mousegetpos,x,y
-	drag(x3,y2,x3,y3)
-	dragr(x3,y2,x3,y3)
-	mousemove,%x%,%y%
-}
-return
 
 
 ; Resend courier to the next available teamate
@@ -242,3 +226,15 @@ LAlt & `::
 	mousemove,%x%,%y%
 }
 return
+
+
+; dota_select_hero npc_dota_hero_grimstroke
+; Left::
+    ; While GetKeyState("Left","p")
+    ; {
+        ; Send, {Up}
+		; Send, {Enter}
+        ; Sleep, 10
+    ; }    
+
+; return
