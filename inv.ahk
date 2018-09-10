@@ -1,27 +1,13 @@
-﻿#NoEnv
+﻿#Include %A_ScriptDir%/utility.ahk
+#NoEnv
 SendMode Input 
 SetWorkingDir %A_ScriptDir%  
-#CommentFlag //
 
-delay()
-{	
-  Random, delay, 50,  150
-  Sleep, delay
-}
+
 
 long_delay()
 {	  
   Sleep, 150
-}
-
-use(key)
-{
-  Send, {%key%}
-  delay()
-  Send, {%key%}
-  delay()
-  Send, {%key%}
-  Return
 }
 
 
@@ -29,54 +15,54 @@ LAlt & q::
   send("cold")
 return
 
+; LAlt & a::    
+  ; send("ice")
+; return
 
 LAlt & w::  
   send("emp")
 return
+
+; LAlt & s::  
+  ; send("alacrity")
+; return
 
 
 LAlt & e::  
   send("sun")
 return
 
+; LAlt & d::  
+  ; send("meteor")
+; return
 
-~q & LAlt::  
-  send("ice") 
-  send, r
-  long_delay()
-  send, d  
-return
+; eul --> meteor --> sun
+; LAlt & t::  
+  ; send, 0
+  ; sleep, 650
+  ; ability(5)
+  ; sleep, 400
+  ; ability(4)
+; return
 
 
-~w & LAlt::  
-  send("ghost_q") 
-  send, r
-  send, q 
-  long_delay()
-  send, d
-return
-
-+w::  
-  send("ghost_w") 
-  send, r
-  send, w 
-  delay()
-  send, w 
-  long_delay()
-  send, d
-return
-
-~e & LAlt::  
-  send("alacrity") 
-  send, r
-  long_delay()
-  send {LAlt down}{d}{LAlt up}
-  delay()
-  send, e
-  delay()
-  send, e  
-  delay()
+XButton1:: 
+  send("alacrity")
+  ability(6)
+  sleep, 100
+  send, !d
+  send("sun")
+  send, ee
   send, g
+return
+
+XButton2:: 
+  send, {Shift Down}
+  send("ghost_w")
+  ability(6)
+  sleep, 100
+  send, v
+  send, {Shift Up}
 return
 
 
