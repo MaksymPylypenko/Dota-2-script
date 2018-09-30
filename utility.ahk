@@ -4,8 +4,6 @@ SendMode Input
 SetWorkingDir %A_ScriptDir%  
 SetNumlockState, AlwaysOn
 SetCapsLockState, Off
-#Include %A_ScriptDir%/pn.ahk
-
 
 ; Config 
 ;=======================================================================

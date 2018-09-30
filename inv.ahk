@@ -4,21 +4,6 @@ SendMode Input
 SetWorkingDir %A_ScriptDir%  
 
 
-; Sunstrike timing remainder
-Numpad1::
-	PleasantNotify("Sun strike at level 3 quas", "Use just before tornado hits" , 600, 110, "t hc", "11")
-	Sleep, 2000
-	pn_mod_title("Sun strike at level 4 quas")
-	pn_mod_msg("Use when tornado hits")
-	Sleep, 3000
-	pn_mod_title("Sun strike at level 5 quas")
-	pn_mod_msg("Use when the enemy is at the top of tornado")
-	Sleep, 3000
-	pn_mod_title("Sun strike at the last level of quas")
-	pn_mod_msg("Use when the enemy made 1 and a half rotations in tornado")	
-return
-
-
 ; Select 3 elements
 LAlt & q::    
   send("qqq")
