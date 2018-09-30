@@ -4,144 +4,74 @@ SendMode Input
 SetWorkingDir %A_ScriptDir%  
 
 
-
-long_delay()
-{	  
-  Sleep, 150
-}
-
-
-LAlt & q::    
-  send("cold")
+; Sunstrike timing remainder
+Numpad1::
+	PleasantNotify("Sun strike at level 3 quas", "Use just before tornado hits" , 600, 110, "t hc", "11")
+	Sleep, 2000
+	pn_mod_title("Sun strike at level 4 quas")
+	pn_mod_msg("Use when tornado hits")
+	Sleep, 3000
+	pn_mod_title("Sun strike at level 5 quas")
+	pn_mod_msg("Use when the enemy is at the top of tornado")
+	Sleep, 3000
+	pn_mod_title("Sun strike at the last level of quas")
+	pn_mod_msg("Use when the enemy made 1 and a half rotations in tornado")	
 return
 
-; LAlt & a::    
-  ; send("ice")
-; return
+
+; Select 3 elements
+LAlt & q::    
+  send("qqq")
+return
 
 LAlt & w::  
-  send("emp")
+  send("www")
 return
-
-; LAlt & s::  
-  ; send("alacrity")
-; return
-
 
 LAlt & e::  
-  send("sun")
+  send("eee")
 return
 
-; LAlt & d::  
-  ; send("meteor")
-; return
 
-; eul --> meteor --> sun
-; LAlt & t::  
+
+; Eul --> meteor --> sun
+; LWin:: 
   ; send, 0
-  ; sleep, 650
+  ; sleep, 900 ; sun
   ; ability(5)
-  ; sleep, 400
+  ; sleep, 400 ; meteor
   ; ability(4)
 ; return
 
-
-XButton1:: 
-  send("alacrity")
-  ability(6)
-  sleep, 100
-  send, !d
-  send("sun")
-  send, ee
-  send, g
-return
-
-XButton2:: 
-  send, {Shift Down}
-  send("ghost_w")
-  ability(6)
-  sleep, 100
-  send, v
-  send, {Shift Up}
-return
-
+; Refresher
+; LWin:: 
+  ; item(6) ; hex
+  ; ability(4) ; blast
+  ; create("eew")
+  ; ability(4) ; meteor
+  ; item(2) ; refresher 
+  ; ability(4) ; meteor4 
+  ; Sleep, 900
+  ; ability(5) ; blast
+  ; item(6) ; hex
+  ; create("eee")
+  ; ability(4) ; sun  
+; return
 
  
 
-send(ability)
+send(sequence)
 {
-  if ability = cold
-  {
-    Send, q
-    delay()
-    Send, q
-    delay()
-    Send, q
-  }
+	Loop, Parse, sequence
+	Send % A_LoopField
+	delay()
+}
 
-  else if ability = emp
-  {
-    Send, w
-    delay()
-    Send, w
-    delay()
-    Send, w
-  }
-
-  else if ability = sun
-  {
-    Send, e
-    delay()
-    Send, e
-    delay()
-    Send, e
-  }
-
-  else if ability = alacrity
-  {
-    Send, w
-    delay()
-    Send, w
-    delay()
-    Send, e
-  }
-
-  else if ability = ghost_q
-  {
-    Send, w
-    delay()
-    Send, q
-    delay()
-    Send, q
-  }
-
-  else if ability = ghost_w
-  {
-    Send, q
-    delay()
-    Send, q
-    delay()
-    Send, w
-  }
-
-    else if ability = meteor
-  {
-    Send, w
-    delay()
-    Send, e
-    delay()
-    Send, e
-  }
-
-  else if ability = ice
-  {
-    Send, q
-    delay()
-    Send, q
-    delay()
-    Send, e
-  }
-  
+create(sequence)
+{
+	send(sequence)
+	ability(6)
+	Sleep, 200
 }
 
 

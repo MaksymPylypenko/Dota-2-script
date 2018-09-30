@@ -4,6 +4,7 @@ global x
 global y
 global soulringIndex
 global bottleIndex
+global soulringActive
 
 
 ; Config 
@@ -55,10 +56,20 @@ LAlt & t::
 return
 
 
+; Directional rearm - blink
+LWin:: 
+	direct() 
+	sleep, 100
+	send, t
+	ability(6)
+	repeater("t","LWin") 
+return
+
+
 ; Drop items during rearm
 LAlt & d::
 {
-	Set1920x1080(void)
+	Set1600x900(void)
 	
 	Send {Shift Down}
 	mousegetpos,x,y	; save mouse position
@@ -92,17 +103,19 @@ LAlt & d::
 	
 	; what about soul-ring?
 	soulringIndex = -1
+	soulringActive = -1
 		
 	PixelGetColor, soulring1, soulring1X,soulring1Y, RGB 	
 	;Msgbox, "%soulring1%"  		
 	
 	if soulring1 = %soulring1C_cool_down%
 	{		
-		soulringIndex = 1
+		soulringIndex = 1		
 	}		
 	else if soulring1 = %soulring1C_active%
 	{		
 		soulringIndex = 1 
+		soulringActive = 1
 	}	
 	else ; need an extra check.. active soulring might have a hover effect
 	{
@@ -111,12 +124,17 @@ LAlt & d::
 		
 		if soulring1 = soulring1C_active		
 		{
-			soulringIndex = 1 
+			soulringIndex = 1
+			soulringActive = 1
 		}
 	}
 	
-	; now we can rearm
-	ability(6)
+	if soulringActive != 1 ; if soul-ring is active, we dont need rearm yet
+	{
+		;   can rearm
+		ability(6)
+		Sleep, 50 ; make sure rearm was pressed 
+	}
 		
 	; I assume that 2 slot are never used (e.g. 4-blink ,5-travels)
 	; drop any item that gives mana (last item first!) 	
@@ -134,7 +152,10 @@ LAlt & d::
 	}	
 	if soulringIndex != 1
 	{
-		drop(1)
+		if soulringActive != 1
+		{
+			drop(1)
+		}		
 	}		
 			
 	Send {Shift Up}	
