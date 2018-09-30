@@ -1,8 +1,10 @@
 ﻿#NoEnv
+#SingleInstance force
 SendMode Input 
 SetWorkingDir %A_ScriptDir%  
 SetNumlockState, AlwaysOn
 SetCapsLockState, Off
+#Include %A_ScriptDir%/pn.ahk
 
 
 ; Config 
@@ -27,20 +29,20 @@ global directional_move = "v"
 ; Use Window Spy to find your coordinates
 
 ; 1600 x 900
-; global x1 = 950	   	; 1st column
-; global x2 = 1000	; 2nd column
-; global x3 = 1055	; 3d column
-; global y1 = 800	   	; 1st row - items
-; global y2 = 845	   	; 2nd row - items
-; global y3 = 880     ; 3d row - backpack	  
+global x1 = 950	   	; 1st column
+global x2 = 1000	; 2nd column
+global x3 = 1055	; 3d column
+global y1 = 800	   	; 1st row - items
+global y2 = 845	   	; 2nd row - items
+global y3 = 880     ; 3d row - backpack	  
 
 ; 1920 x 1080
-global x1 = 1142	; 1st column
-global x2 = 1206	; 2nd column
-global x3 = 1270	; 3d column
-global y1 = 968   	; 1st row - items
-global y2 = 1014	; 2nd row - items
-global y3 = 1055    ; 3d row - backpack	  
+; global x1 = 1142	; 1st column
+; global x2 = 1206	; 2nd column
+; global x3 = 1270	; 3d column
+; global y1 = 968   	; 1st row - items
+; global y2 = 1014	; 2nd row - items
+; global y3 = 1055    ; 3d row - backpack	  
 
 
 ; Functions
@@ -49,19 +51,22 @@ global y3 = 1055    ; 3d row - backpack
 ; Repeater 
 repeater(key, host)
 {	
-    While GetKeyState(host,"p")
-    {
-        Send, {%key%}
-        Sleep, 10
-    }    
+  Loop
+  { 
+	Send, {%key%}
+    sleep 10
+    If (!GetKeyState(host,"p"))
+      break
+  } 
 }
 
 
 ; Human delay
 delay()
 {	
-  Random, delay, 50,  150
-  Sleep, delay
+  ; Random, delay, 50,  100
+  ; Sleep, delay
+  Sleep, 50
 }
 
 
@@ -89,7 +94,8 @@ dragr(x2,y2,x1,y1)
 
 ; Press item/ability
 item(i)
-{			
+{	
+	delay()
 	if i = 1	
 		Send, {%item1%}	
 	else if i = 2		
@@ -101,11 +107,12 @@ item(i)
     else if i = 5		
 		Send, {%item5%} 	
     else if i = 6	
-		Send, {%item6%} 	
+		Send, {%item6%}	
 }
 ; Press ability
 ability(i)
 {		
+	delay()
 	if i = 1	
 		Send, {%ability1%}	
 	else if i = 2	
@@ -157,9 +164,9 @@ backpack(i)
 		currI = 6
 	}
 	drag(currX,y3,currX,y2)
-	Sleep, 50
+	Sleep, 50	
 	item(currI)
-	Sleep, 50
+	Sleep, 100
 	dragr(currX,y3,currX,y2)	
 }
 backpackL(i)
@@ -178,23 +185,19 @@ backpackL(i)
 CapsLock:: /
 
 
+
+; LWin:: 
+; return
+
 ; Pause / Unpause Script
-LWin::  
+Numpad0::
 	suspend
-	;SoundPlay, sounds/scan.mp3
+	SoundPlay, sounds/scan.mp3
 return
 
-
-; Right click spammer (50ms delay)
-LAlt & h::  
-	; repeater("RButton","RButton")	
-	While GetKeyState("h","p")
-    {
-        Send, {RButton}
-        Sleep, 10		
-    }    
-	; Send, {LAlt Down}
-	; Send, {LAlt Up}
+; Right click spammer (10ms delay)
+$f4::  
+  repeater("RButton","f4")	 
 return
 
 
@@ -212,16 +215,16 @@ LAlt & `::
 	
 	; Check coordinates of the 1st ally 
 	
-	;MouseMove, 1514, 816  	; 1680x900		
-	MouseMove, 1890, 968 	; 1920x1080   
+	MouseMove, 1514, 816  	; 1680x900		
+	; MouseMove, 1890, 968 	; 1920x1080   
 	Sleep, 250
 	
-	;PixelGetColor, check, 1514, 816, RGB ; 1680x900	
-	PixelGetColor, check, 1890, 968, RGB ; 1920x1080   		
+	PixelGetColor, check, 1514, 816, RGB ; 1680x900	
+	; PixelGetColor, check, 1890, 968, RGB ; 1920x1080   		
 	if check != 0xEAE9E91
 	{
-		;Click, 1514, 816 ; 1680x900	
-		Click, 1890, 968 ; 1920x1080  
+		Click, 1514, 816 ; 1680x900	
+		; Click, 1890, 968 ; 1920x1080  
 	}	
 	mousemove,%x%,%y%
 }
@@ -236,5 +239,4 @@ return
 		; Send, {Enter}
         ; Sleep, 10
     ; }    
-
 ; return
