@@ -162,9 +162,9 @@ backpack(i)
 		currI = 6
 	}
 	drag(currX,y3,currX,y2)
-	Sleep, 50	
+	Sleep, 100	
 	item(currI)
-	Sleep, 100
+	Sleep, 150
 	dragr(currX,y3,currX,y2)	
 }
 backpackL(i)
@@ -183,19 +183,16 @@ backpackL(i)
 CapsLock:: /
 
 
-
-; LWin:: 
-; return
-
 ; Pause / Unpause Script
 Numpad0::
 	suspend
 	SoundPlay, sounds/scan.mp3
 return
 
+
 ; Right click spammer (10ms delay)
-$f4::  
-  repeater("RButton","f4")	 
+$LWin::  
+  repeater("RButton","LWin")	 
 return
 
 
