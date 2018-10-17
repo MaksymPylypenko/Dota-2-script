@@ -1,5 +1,5 @@
 # Dota-2-script
-Open source Autohotkey script.
+Autohotkey script.
 
 ## Set-up
 * You can use **utility.ahk** as a starting point to create your own autohotkey script.
@@ -10,20 +10,20 @@ Open source Autohotkey script.
 1. Install [**AutoHotkey**](https://autohotkey.com/download/).
 2. Run **utility.ahk**.
 
-* `LWin` - pause / unpause the script.
-* `alt + RightClick (hold)` - right click spammer.
+* `Numpad0` - pause / unpause the script.
+* `LWin` - right click spammer.
 * `CapsLock` - remmaped to `/`. Can be used as an extra hotkey.
 * `alt + ~` - resend courier to the next available teamate. (requires proper coordinates). 
 
 ## utility.ahk
-It contains functions and hotkeys that you might use for any hero.
+Contains functions and hotkeys that you might use for any hero.
 
 ### repeater( key, host )
-Repeats the same key (50 ms delay). Requires a low ping.
+Repeats the same key (50 ms delay). Requires a low ping. Might not work properly if ALT is pressed.
 
 **Examples of using:**
-* steal rune. 
-* blink after rearm / aegis.
+* pickup rune or aegis. 
+* blink after rearm / reincarnation.
 
 ### direct( )
 A "quick" directional move. Instead of holding a key before cliking, just click once. Mostly used in directItem( i ) and directAbility( i ).
@@ -35,15 +35,13 @@ A "quick" directional move. Instead of holding a key before cliking, just click 
 * forcestuff.
 
 ### backpack( i ) 
-Uses drag(x1,y1,x2,y2) to move an item with a cursor (requires proper coordinates). Allows to quickly use an item from a backpack (near fontain / shop). Alternative version backpackL( i ) restores mouse position at the end. 
+Uses drag(x1,y1,x2,y2) to move an item with a cursor (requires proper coordinates). Allows to quickly use an item from a backpack (near fontain / shop). Alternative version - backpackL( i ), it restores mouse position at the end. 
 
-There are also  item( i ) and ability ( i ) for convinience. They simply use an item or ability at index i. Allows to change hotkeys in a config section.
+There are also item( i ) and ability ( i ) for convinience. They simply use an item or ability at index i. Mapped to hotkeys in a config section.
 
 **Examples of using:**
 * bottle on any hero (as 7th slot) near fontain.
 * bkb on spectre (as 7th slot) near fontain. 
-* tranquil boots swap when jungling.
-
 
 ## Examples of custom scripts
 * To import utility functions, add `#Include %A_ScriptDir%/utility.ahk` at the top of your custom script.
@@ -61,7 +59,7 @@ There are also  item( i ) and ability ( i ) for convinience. They simply use an 
 
 
 ## tinker3.ahk
-Requires proper coordinates!
+Requires proper coordinates! 
 
 * `alt + d` - drop items (shift queue during rearm). 
   * find bottle and use it.
