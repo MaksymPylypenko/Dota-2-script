@@ -28,19 +28,30 @@ return
   ; ability(4)
 ; return
 
-; Refresher
-; LWin:: 
-  ; item(6) ; hex
-  ; ability(4) ; blast
-  ; create("eew")
+; f5:: 
+  ; ; item(6) ; hex
+  ; ability(5) ; blast  
+  ; Sleep, 100
   ; ability(4) ; meteor
-  ; item(2) ; refresher 
-  ; ability(4) ; meteor4 
-  ; Sleep, 900
-  ; ability(5) ; blast
-  ; item(6) ; hex
+  ; Sleep, 100
   ; create("eee")
-  ; ability(4) ; sun  
+  ; Sleep, 100
+  ; ; send, {LAlt down}
+  ; ability(4) ; cataclysm
+  ; ; send, {LAlt up}
+  ; Sleep, 100
+  ; item(3) ; refresher 
+  ; Sleep, 100
+  ; ; send, {LAlt down}
+  ; ability(4) ; cataclysm
+  ; ; send, {LAlt up}
+  ; Sleep, 100
+  ; ability(5) ; meteor4 
+  ; Sleep, 700
+  ; create("qwe")
+  ; ability(4) ; blast
+  ; Sleep, 100
+  ; ;item(6) ; hex  
 ; return
 
  
@@ -48,8 +59,11 @@ return
 send(sequence)
 {
 	Loop, Parse, sequence
-	Send % A_LoopField
-	delay()
+	{
+		Send % A_LoopField		
+		;delay()
+	}
+	
 }
 
 create(sequence)
