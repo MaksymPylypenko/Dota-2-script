@@ -57,13 +57,13 @@ return
 
 
 ; Directional rearm - blink
-LWin:: 
-	direct() 
-	sleep, 100
-	send, t
-	ability(6)
-	repeater("t","LWin") 
-return
+; LWin:: 
+	; direct() 
+	; sleep, 100
+	; send, t
+	; ability(6)
+	; repeater("t","LWin") 
+; return
 
 
 ; Drop items during rearm
