@@ -29,8 +29,8 @@ Autohotkey scripts.
 - can be used as an extra hotkey.
 
 #### Resend a courier to the next available teammate.
+`requires proper coordinates and pixel colours`
 > ALT + ~ 
-- requires `proper coordinates and pixel colours`.
 
 ## Default functions:
   
@@ -89,7 +89,7 @@ Examples of using:
 <h2>tinker3.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/1/1b/Tinker_minimap_icon.png?version=0a42750ce18979d6d476eed5a2c7bcc4">
 </h2>
 
-Requires **proper coordinates and pixel colours**.
+`requires proper coordinates and pixel colours`
 
 #### Drop
 > alt + d
