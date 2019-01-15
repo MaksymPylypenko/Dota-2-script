@@ -25,7 +25,7 @@ Autohotkey scripts.
 > CapsLock
 
 - resend courier to the next available teamate
-- requires **proper coordinates and pixels colours**
+- requires **proper coordinates and pixel colours**
 > ALT + ~ 
 
 ### Default functions:
@@ -81,7 +81,7 @@ Examples of using:
 <h2>tinker3.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/1/1b/Tinker_minimap_icon.png?version=0a42750ce18979d6d476eed5a2c7bcc4">
 </h2>
 
-- requires **proper coordinates and pixels colours**
+- requires **proper coordinates and pixel colours**
 
 ### drop
 1. drop items (shift queue during rearm).
