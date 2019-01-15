@@ -52,7 +52,7 @@ There are also item( i ) and ability ( i ) for convinience. They simply use an i
 * bottle on any hero (as 7th slot) near fontain.
 * bkb on spectre (as 7th slot) near fontain. 
 
-## earth.ahk 
+# earth.ahk 
 ### blink-safe boulder smash 
 - Uses boulder smash
 - Prevents placing a stone in a previous location after using blink (need to have a small delay)
@@ -64,13 +64,13 @@ There are also item( i ) and ability ( i ) for convinience. They simply use an i
   - also not possible to replicate slow to other heroes under magnetize. 
 > alt + w 
 
-## sf.ahk 
+# sf.ahk 
 ### directed raze 
 - directs the hero and uses raze 
 - usefull when standing near edges 
 > alt + q or w or e
 
-## tinker3.ahk
+# tinker3.ahk
 - requires **proper coordinates and pixels colours**
 
 ### drop
@@ -88,7 +88,7 @@ There are also item( i ) and ability ( i ) for convinience. They simply use an i
 
 > alt + f 
 
-## kunka.ahk
+# kunka.ahk
 ### timings: 
 - 4000 ms - max duration of x-mark  
 - 400 ms - torrent, x-mark cast animation 
