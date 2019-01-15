@@ -1,5 +1,5 @@
 # Dota-2-script
-Autohotkey scripts
+Autohotkey scripts.
 
 ## Concerns 
 * There is no UI to set your specific hotkeys yet.. You might need to change some global variables in utility.ahk to match your in-game hotkeys
@@ -54,7 +54,10 @@ Examples of using:
 * bottle on any hero (as 7th slot) near fontain.
 * bkb on spectre (as 7th slot) near fontain. 
 
-# earth.ahk 
+
+<h2>earth.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/1/1f/Earth_Spirit_minimap_icon.png?version=338508a1c39498cee5fa3bb7f6aaf2c7"> 
+</h2>
+  
 ### blink-safe boulder smash 
 - Uses boulder smash
 - Prevents placing a stone in a previous location after using blink (need to have a small delay)
@@ -66,13 +69,17 @@ Examples of using:
   - also not possible to replicate slow to other heroes under magnetize. 
 > alt + w 
 
-# sf.ahk 
+<h2>sf.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/0/00/Shadow_Fiend_minimap_icon.png?version=e23a8fbdbc353ca25c2e169ee2ee195e"> 
+</h2>
+
 ### directed raze 
 - directs the hero and uses raze 
 - usefull when standing near edges 
 > alt + q or w or e
 
-# tinker3.ahk
+<h2>tinker3.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/1/1b/Tinker_minimap_icon.png?version=0a42750ce18979d6d476eed5a2c7bcc4">
+</h2>
+
 - requires **proper coordinates and pixels colours**
 
 ### drop
@@ -90,7 +97,9 @@ Examples of using:
 
 > alt + f 
 
-# kunka.ahk
+<h2>kunka.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/5/5b/Kunkka_minimap_icon.png?version=e9293220d87c521d719f05dec9bcd668">
+</h2>
+
 ### timings: 
 - 4000 ms - max duration of x-mark  
 - 400 ms - torrent, x-mark cast animation 
