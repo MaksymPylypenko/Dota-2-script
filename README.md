@@ -4,7 +4,7 @@ Autohotkey scripts.
 ## Concerns 
 * Autohotkey scripts are currently **prohibited** in proffesional dota 2 games.
 * You might need to change some global variables in **utility.ahk** to match your in-game hotkey, since there is no user interface yet.
-* Some scripts compare pixels on the screen. Unless your resolution is 1600 x 900, you might need to use Window Spy to find your own locations and colours. Moreover, pixels may have different values depending on the graphics API use (directX, OpenGl, Vulkan).
+* Some scripts compare pixels on the screen. Unless your resolution is 1600 x 900, you might need to use Window Spy to find your own locations and colours. Moreover, pixels may have different values depending on the graphics API: directX, OpenGl, Vulkan...
 
 ## Set-up
 - You need to have [**AutoHotkey**](https://autohotkey.com/download/) installed to execute **.ahk** files.
