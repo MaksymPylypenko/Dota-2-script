@@ -1,4 +1,7 @@
-﻿#Include %A_ScriptDir%/utility.ahk
+﻿I_Icon = icons/earthspirit.png
+
+#Include %A_ScriptDir%/utility.ahk
+#SingleInstance force
 
 ; invisible stone
 LAlt & w::  

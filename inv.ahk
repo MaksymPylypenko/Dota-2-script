@@ -1,7 +1,7 @@
-﻿#Include %A_ScriptDir%/utility.ahk
-#NoEnv
-SendMode Input 
-SetWorkingDir %A_ScriptDir%  
+﻿I_Icon = icons/invoker.png
+
+#Include %A_ScriptDir%/utility.ahk
+#SingleInstance force
 
 
 ; Select 3 elements
@@ -17,6 +17,16 @@ LAlt & e::
   send("eee")
 return
 
+LAlt & r::  
+  send, r
+  ; sleep, 100
+  ; send, d
+return
+
+; $d::
+; Send,!d
+; Send,d
+; return
 
 
 ; Eul --> meteor --> sun

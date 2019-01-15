@@ -5,6 +5,7 @@ SetWorkingDir %A_ScriptDir%
 SetNumlockState, AlwaysOn
 SetCapsLockState, Off
 
+
 ; Config 
 ;=======================================================================
 
@@ -43,6 +44,62 @@ global y3 = 880     ; 3d row - backpack
 ; global y3 = 1055    ; 3d row - backpack	  
 
 
+; Switcher
+;=======================================================================
+
+I_Default = icons/dota2.png
+
+IfExist, %I_Icon%
+  Menu, Tray, Icon, %I_Icon%
+IfNotExist, %I_Icon%
+  Menu, Tray, Icon, %I_Default%
+
+^Numpad1:: 
+I_Icon = icons/invoker.png
+Run "utility.ahk" 
+ExitApp
+return
+
+^Numpad2:: 
+Run "tinker3.ahk" 
+ExitApp
+return
+
+^Numpad3:: 
+Run "inv.ahk" 
+ExitApp
+return
+
+^Numpad4:: 
+Run "earth.ahk" 
+ExitApp
+return
+
+^Numpad5:: 
+Run "meepo.ahk" 
+ExitApp
+return
+
+^Numpad6:: 
+Run "arc.ahk" 
+ExitApp
+return
+
+^Numpad7:: 
+Run "magnus.ahk" 
+ExitApp
+return
+
+^Numpad8:: 
+Run "sf.ahk" 
+ExitApp
+return
+
+^Numpad9:: 
+Run "kunka.ahk" 
+ExitApp
+return
+
 ; Functions
 ;=======================================================================
 
@@ -71,9 +128,7 @@ delay()
 ; Directional move + right click
 direct()
 {  	
-  Send, {%directional_move% Down}
-  Send, {Click, R}  
-  Send, {%directional_move% Up}       
+  Send, {%directional_move% Down}{Click, R}{%directional_move% Up}       
 }
 
 
@@ -185,8 +240,12 @@ CapsLock:: /
 
 ; Pause / Unpause Script
 Numpad0::
-	suspend
-	SoundPlay, sounds/scan.mp3
+    suspend
+	SoundPlay, sounds/scan.mp3	
+return
+
+LAlt & Numpad0::	
+    Reload	
 return
 
 

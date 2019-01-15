@@ -1,37 +1,32 @@
-﻿#Include %A_ScriptDir%/utility.ahk
-#CommentFlag //
+﻿I_Icon = icons/sf.png
 
-//$q
-LAlt & q::
+#Include %A_ScriptDir%/utility.ahk
+#SingleInstance force
+
+;1
+LAlt & q::  
+  direct()
   Send, q  
+  Reload  
 return 
 
-$q::    
-  direct()
-  Send, q
-return
-
+;2
 LAlt & w::  
-  Send, w
-return
-
-$w::  
   direct()
   Send, w
+  Reload  
 return
 
+;3
 LAlt & e::  
-  Send, e
-return
-
-$e::  
   direct()
   Send, e
+  Reload  
 return
 
 LAlt & r::
   Send, 0      
-  // Sleep, 0 
+  ; Sleep, 0 
   Sleep, 830 // 830 is an exact delay 
   Send, { Space }  
   Send, t

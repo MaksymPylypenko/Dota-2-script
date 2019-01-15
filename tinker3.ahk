@@ -1,4 +1,7 @@
+I_Icon = icons/tinker.png
+
 #Include %A_ScriptDir%/utility.ahk
+#SingleInstance force
 
 global x
 global y
@@ -132,6 +135,7 @@ LAlt & d::
 	if soulringActive != 1 ; if soul-ring is active, we dont need rearm yet
 	{
 		;   can rearm
+		Sleep, 50
 		ability(6)
 		Sleep, 50 ; make sure rearm was pressed 
 	}
