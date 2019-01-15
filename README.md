@@ -53,7 +53,7 @@ There are also item( i ) and ability ( i ) for convinience. They simply use an i
 <a href='https://photos.google.com/share/AF1QipM8nC1isaOdMMlGHSjo88Px1PB5M1THSoTuINmtbAm3NNHSegNHH_GVnNDj9CCp8A?key=dlFGSDhidFUxUnVsQjRRVFZNQV96ZU1Ka1BLWFJR'/><img src='https://lh3.googleusercontent.com/F8ax7MZDXmUAtYzHfyWWTO7B47j4_yoDumuIlCqyAfF6AQVibhe5z9wd5B4ybFTawIXXsVSBpg3vadq6KnIlhSqODRVoUVX4GfPknTgjfI02C71VXu7CNhaf4r6XHJPJyyCWvrAdYN7YuxqQ3c2GNBYNwtEm4-yeRKoJqIVBKROE-YN2_tYdTsNuiKIF8lYXKehtQ0vyGcUNbgwD0q3n8l1O5eZsD7c5uvnIXRWSeVzYxEJxp3HXQJKrtzWyDssTIIRjXML-1_M5ZQZvidsLlp188Q5OBAZyTVWf-KCCALCGBoxKKCTa7tElGRPyYgirdnxwT1eAQT9PfV4zC7208oLKQcwqxUeyGm4YvpiZ2b_ZImb7_ibMgTzJdo_jZhpI8Mz2Bu73R7bHtVPwi_2WAiemuTQ404Fd_btl8ciaC06TcBDUWPnK08Rd0drAeTzJij3HKzR41U_tKkOs5t2bl3YGV5vgJQuAIswYtTQU96m3i7zY2QeK38IxWK8nHzuAiJ6dWs0uQ10yoq6qlpgZZQcTwMFMq2-lgs_p-XBpULplD9S1xKcYKiT4pq0qdiRxWxEbe0GNVkphXWuac8XCjrV9jHaXTd_8VaNq9QCm0pBUvD0J6St-rB0owzspaPqUrVQl56kkrUa2rRfANT6oVGn4Mg2SWrVe_A=w1364-h767-no' /></a>
 
 ## sf.ahk 
-* `q/w/e` - rotate the hero and use raze (usefull when standing near edges).
+* `alt + q or w or e` - direct the hero and use raze (usefull when standing near edges). 
 
 <a href='https://photos.google.com/share/AF1QipOaeWFNBmnsrGPRVVeBfvAHFLoG3BEPnL8deRxEz6tjUJ2gMzO_HlnzdWzvh_5gag?key=Rk4wUEpIcTQ5OFZmSGtXY2xibURGemRnNXhZWmJR'/><img src='https://lh3.googleusercontent.com/D3KiasiCK-EDmF9-cTGhRNxtj-moqzE6sfrHSQAfuFFP4XDNCB1lMLjEI4R-S6usJB_UTceTpaFE9Rc2cF30kd6aXHIrRrFXjlH6ZhPndKKJIOlmH-wtLccBJojQr0fGZQiKKA58Uw6esEMqmiGEV3YRIE91rNJ-59sqLEgbqsWBtB3yJSygAFcxRnfYspVr-K6_bLM-cSeZ6-gORIGJDas_Avgd0ueHz01GmElNP232jmhlNriaC_f7lLcRA9KsRFXnnpMDFLwnTYrh61uT9DDYP3ijXM_betTzZp1A7qWcoE6u_B2lsmeMlxVRGBdzAe6TB8Z85ZjPEwWRyeM1CNqKSEm8fdufOtZNj9Vi2eHYR0lUoq36JJexrZNh5255VUoH14RMbuYowQVPRqK8BuHxVHbEZ3VCgB_vQkW8XMrc-oD-M1rZ4vKghPKD90IKbQ88UvHzPnjSuhTpDKFwrqj0g8hQtMDl-fpLPIQdufybLe2AAKSrhvEXU-smnrVXwBNC3hmFK2BlBnsBD9TNo6xZZn3j6yjghI5m-ZFHqSxURCgS-tOu0ZQ3hRJGNVCkD4BTgF6u60FvRAUE7RKSzjdEk407J1oshlU2qC8z1d3WuzVqzlY_9LQDkiE4N2aEeQ3vN326BiBGk2K48yzuVxYs-050N1_SIw=w1364-h767-no' /></a>
 
@@ -70,3 +70,22 @@ Requires proper coordinates!
   * pickup dropped items in the original order (hopefully).
 
 <a href='https://photos.google.com/share/AF1QipOz5fZZx3X_L-59v4_Ay_XWxmEPgYi7-MnCPKLY7fNUbMAR9wW_6eDvn-84VxhMlw?key=WW1nSUY3RWlQNXY3TmV2WmNuWllRYUdMbnVHTHFn'/><img src='https://lh3.googleusercontent.com/iqu5LAz6E4X0IWqjxu9FCVfXE8rjZbaWmS4EXR5wwUZDGrYwI-nqjti52ZDzXdfgaj4_m1vwwHQ__Oynox346BvIKTM0VIumgdIwyzWu2SWs22oUcoDi__ccIwHwRQ7nYXInhzCppmFOFd0BhxZVeX6o46pupkok55WnZCPE_8L7ZxmEHS9zwJrN0BhueTiRwAxhsG4aZguXf1GriljPEyqOf6AetFAuGSoU7g7NaO2u0IhJddkYPTxlRbPRRP6O-iDXJczkiTBVALqrJJ1LfU0FuskWmbaI6a7vorydNFZaLbulGUkM1e9ZXJ3mtUwYAqOGjhgXhgDLSWSSEZ3wRBSRSEde86SZXwmRh_GcQXJ4yZriUujitWxWfbdVyZm_qnqcQCmQghdlFpFcuVuHzWhkpq63L1gV43oGhNHDzSSnUlIanUPkIq36bD-k8hnf_bwmaj3zytHSOhy1ic5DoS6QMOwmEomk4g9MpybxSu5NQWp-dXnkLre-jJ1qP73Nbfe0nsv8onatgq76aLAegwjV1EgOH8-ygMtd6ukM4W7OX6dAFaEX5k19rQF7uJHHALUqeNOxXVEcpzzw5RZSFgvqAPN8-zLeTcT8SWvV3rG1Is5JgGtcl8-UjHBwNNyQkXRdzbVmywEHRnHcmz3a2C38JezNgMxVCw=w1092-h614-no' /></a>
+
+## kunka.ahk
+### timings: 
+- 4000 ms - max duration of x-mark  
+- 400 ms - torrent, x-mark cast animation 
+- 1600 + 400 = 2000 ms - effective impact delay for torrent. 
+- 2000 - 400 = 1600 ms - wait after torrent to return with x-mark.
+- 4000 - 1600 = 2400 ms - the longest possible time to use gapless torrent after using x-mark (no return) 
+### x-mark into torrent combo:
+- The script uses torrent and waits exectly 1600 ms to return an enemy with x-mark. 
+- However, you should keep in mind that you are not allowed to wait longer than 2400 ms for proper execution.  
+- Note that x-mark debuff duration can be checked by clicking the unit on which it is applied. 
+- It is also not obvious wether we will be able to return an enemy or not (can always get stunned). Use it wisely 
+> alt + d 
+### x-mark into ghostship into torrent combo:
+- This combo is more situational and is much easier to execute by hand.
+- Simply use ghost ship, return with x-mark when it almost hits and immedietly use torrent.
+- I would not reccomend using a script for this one ... 
+> alt + f 
