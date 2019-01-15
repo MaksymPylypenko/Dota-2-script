@@ -11,23 +11,24 @@ Autohotkey scripts.
 - To run - open any **.ahk** file. An appropriate icon should appear in the system tray (area near clocks). 
 ## Default hotkeys:
 
-- pause / unpause the script.
+### pause / unpause the script.
 > Numpad0
 
-- switch between custom scripts. 
+### switch between custom scripts. 
 > Numpad2 - Numpad9 
 
-- reset to default script.
+### reset to default script.
 > Numpad1 
 
-- right click spammer.
+### right click spammer.
 > LWin 
 
+### extra hotkey
+> CapsLock
 - capslock is remmaped to `/`.
 - can be used as an extra hotkey.
-> CapsLock
 
-- resend a courier to the next available teamate.
+### resend a courier to the next available teammate.
 - requires **proper coordinates and pixel colours**.
 > ALT + ~ 
 
