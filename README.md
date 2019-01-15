@@ -9,6 +9,10 @@ Autohotkey scripts
 1. Install [**AutoHotkey**](https://autohotkey.com/download/).
 2. Run **utility.ahk**.
 
+## Customize  
+- **utility.ahk** contains functions and hotkeys that you might use for any hero.
+- `#Include %A_ScriptDir%/utility.ahk` at the top of your custom script, if you want to reuse the following functions... 
+
 - pause / unpause the script
 > Numpad0
 
@@ -22,10 +26,6 @@ Autohotkey scripts
 - resend courier to the next available teamate
 - requires **proper coordinates and pixels colours**
 > ALT + ~ 
-
-## utility.ahk
-- Contains functions and hotkeys that you might use for any hero.
-- `#Include %A_ScriptDir%/utility.ahk` at the top of your custom script, if you want to reuse the following functions... 
 
 ### repeater( key, host )
 Repeats the same key (50 ms delay). Requires a low ping. Might not work properly if ALT is pressed.
