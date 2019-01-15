@@ -13,6 +13,7 @@ Autohotkey scripts
 - **utility.ahk** contains functions and hotkeys that you might use for any hero.
 - `#Include %A_ScriptDir%/utility.ahk` at the top of your custom script, if you want to reuse the following functions... 
 
+### Default hotkeys:
 - pause / unpause the script
 > Numpad0
 
@@ -27,28 +28,29 @@ Autohotkey scripts
 - requires **proper coordinates and pixels colours**
 > ALT + ~ 
 
-### repeater( key, host )
+### Default functions:
+#### repeater( key, host )
 Repeats the same key (50 ms delay). Requires a low ping. Might not work properly if ALT is pressed.
 
-**Examples of using:**
+Examples of using:
 * pickup rune or aegis. 
 * blink after rearm / reincarnation.
 
-### direct( )
+#### direct( )
 A "quick" directional move. Instead of holding a key before cliking, just click once. Mostly used in directItem( i ) and directAbility( i ).
 
-**Examples of using:**
+Examples of using:
 * raze on shadow fiend. 
 * jump on slark / mirana.
 * rp on magnus. 
 * forcestuff.
 
-### backpack( i ) 
+#### backpack( i ) 
 Uses drag(x1,y1,x2,y2) to move an item with a cursor (requires proper coordinates). Allows to quickly use an item from a backpack (near fontain / shop). Alternative version - backpackL( i ), it restores mouse position at the end. 
 
 There are also item( i ) and ability ( i ) for convinience. They simply use an item or ability at index i. Mapped to hotkeys in a config section.
 
-**Examples of using:**
+Examples of using:
 * bottle on any hero (as 7th slot) near fontain.
 * bkb on spectre (as 7th slot) near fontain. 
 
