@@ -60,7 +60,7 @@ Examples of using:
 * bkb on spectre (as 7th slot) near fontain. 
 
 
-<h2>earth.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/1/1f/Earth_Spirit_minimap_icon.png?version=338508a1c39498cee5fa3bb7f6aaf2c7"> 
+<h2>Earth.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/1/1f/Earth_Spirit_minimap_icon.png?version=338508a1c39498cee5fa3bb7f6aaf2c7"> 
 </h2>
   
 #### Blink-safe boulder smash 
@@ -76,7 +76,7 @@ Examples of using:
   - also not possible to replicate slow to other heroes under magnetize. 
 
 
-<h2>sf.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/0/00/Shadow_Fiend_minimap_icon.png?version=e23a8fbdbc353ca25c2e169ee2ee195e"> 
+<h2>Sf.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/0/00/Shadow_Fiend_minimap_icon.png?version=e23a8fbdbc353ca25c2e169ee2ee195e"> 
 </h2>
 
 #### Directed raze 
@@ -86,7 +86,7 @@ Examples of using:
 - works similarly for q, w, e. 
 
 
-<h2>tinker3.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/1/1b/Tinker_minimap_icon.png?version=0a42750ce18979d6d476eed5a2c7bcc4">
+<h2>Tinker3.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/1/1b/Tinker_minimap_icon.png?version=0a42750ce18979d6d476eed5a2c7bcc4">
 </h2>
 
 `requires proper coordinates and pixel colours`
@@ -105,7 +105,7 @@ Examples of using:
 4. pickup dropped items in the original order (hopefully).
 
 
-<h2>kunka.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/5/5b/Kunkka_minimap_icon.png?version=e9293220d87c521d719f05dec9bcd668">
+<h2>Kunka.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/5/5b/Kunkka_minimap_icon.png?version=e9293220d87c521d719f05dec9bcd668">
 </h2>
 
 #### Timings: 
