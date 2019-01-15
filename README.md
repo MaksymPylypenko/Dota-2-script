@@ -11,37 +11,37 @@ Autohotkey scripts.
 - To run - open any **.ahk** file. An appropriate icon should appear in the system tray (area near clocks). 
 ## Default hotkeys:
 
-### pause / unpause the script.
+#### pause / unpause the script.
 > Numpad0
 
-### switch between custom scripts. 
+#### switch between custom scripts. 
 > Numpad2 - Numpad9 
 
-### reset to default script.
+#### reset to default script.
 > Numpad1 
 
-### right click spammer.
+#### right click spammer.
 > LWin 
 
-### extra hotkey
+#### extra hotkey
 > CapsLock
 - capslock is remmaped to `/`.
 - can be used as an extra hotkey.
 
-### resend a courier to the next available teammate.
-- requires **proper coordinates and pixel colours**.
+#### resend a courier to the next available teammate.
 > ALT + ~ 
+- requires **proper coordinates and pixel colours**.
 
 ## Default functions:
   
-### repeater( key, host )
+#### repeater( key, host )
 Repeats the same key with a 50 ms delay. Can be affected by your ping and network quality.
 
 Examples of using:
 * pickup rune or aegis. 
 * blink after rearm.
 
-### direct( )
+#### direct( )
 A "quick" directional move. Instead of holding a key before cliking, just click once. Mostly used in directItem( i ) and directAbility( i ).
 
 Examples of using:
@@ -50,7 +50,7 @@ Examples of using:
 * rp on magnus. 
 * forcestuff.
 
-### backpack( i ) 
+#### backpack( i ) 
 Uses drag(x1,y1,x2,y2) to move an item with a cursor (requires proper coordinates). Allows to quickly use an item from a backpack (near fontain / shop). Alternative version - backpackL( i ), it restores mouse position at the end. 
 
 There are also item( i ) and ability ( i ) for convinience. They simply use an item or ability at index i. Mapped to hotkeys in a config section.
@@ -63,63 +63,67 @@ Examples of using:
 <h2>earth.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/1/1f/Earth_Spirit_minimap_icon.png?version=338508a1c39498cee5fa3bb7f6aaf2c7"> 
 </h2>
   
-### blink-safe boulder smash 
+#### blink-safe boulder smash 
+> alt + q 
 - Uses boulder smash.
 - Prevents placing a stone in a previous location after using blink (need to have a small delay).
-> alt + q 
-### 1 stone 2 spells 
+
+#### 1 stone 2 spells 
+> alt + w 
 - boulder (q) and rolling (w) using 1 stone only.
 - note that this combo is less effective in **7.20**.
   - slow duration is wasted. 
   - also not possible to replicate slow to other heroes under magnetize. 
-> alt + w 
+
 
 <h2>sf.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/0/00/Shadow_Fiend_minimap_icon.png?version=e23a8fbdbc353ca25c2e169ee2ee195e"> 
 </h2>
 
-### directed raze 
+#### directed raze 
+> alt + q
 - directs the hero and uses raze. 
 - usefull when standing near edges. 
 - works similarly for q, w, e. 
-> alt + q
+
 
 <h2>tinker3.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/1/1b/Tinker_minimap_icon.png?version=0a42750ce18979d6d476eed5a2c7bcc4">
 </h2>
 
 Requires **proper coordinates and pixel colours**.
 
-### drop
+#### drop
+> alt + d
 1. drop items (shift queue during rearm).
 2. find bottle and use it.
 3. drop everything that gives you mana.
 
-> alt + d
-
-### pickup
+#### pickup
+> alt + f 
 1. pickup items (after rearm).
 2. find soul-ring and use it.
 3. find bottle and use it.
 4. pickup dropped items in the original order (hopefully).
 
-> alt + f 
 
 <h2>kunka.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/5/5b/Kunkka_minimap_icon.png?version=e9293220d87c521d719f05dec9bcd668">
 </h2>
 
-### timings: 
+#### timings: 
 - 4000 ms - max duration of x-mark.  
 - 400 ms - torrent, x-mark cast animation. 
 - 1600 + 400 = 2000 ms - effective impact delay for torrent. 
 - 2000 - 400 = 1600 ms - wait after torrent to return with x-mark.
 - 4000 - 1600 = 2400 ms - the longest possible time to use gapless torrent after using x-mark (no return). 
-### x-mark into torrent combo:
+#### x-mark into torrent combo:
+> alt + d 
 - The script uses torrent and waits exectly 1600 ms to return an enemy with x-mark. 
 - However, you should keep in mind that you are not allowed to wait longer than 2400 ms for proper execution.  
 - Note that x-mark debuff duration can be checked by clicking the unit on which it is applied. 
 - It is also not obvious wether we will be able to return an enemy or not (can always get stunned). Use it wisely.
-> alt + d 
-### x-mark into ghostship into torrent combo:
+
+#### x-mark into ghostship into torrent combo:
+> alt + f 
 - This combo is more situational and is much easier to execute by hand.
 - Simply use ghost ship, return with x-mark when it almost hits and immedietly use torrent.
 - I would not reccomend using a script for this one ... 
-> alt + f 
+
