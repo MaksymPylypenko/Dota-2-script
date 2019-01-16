@@ -5,7 +5,6 @@
 
 ;1
 LAlt & q::
-  send, {Alt up}
   direct()
   Send, q  
   delay()
@@ -14,7 +13,6 @@ return
 
 ;2
 LAlt & w::  
-  send, {Alt up}
   direct()
   Send, w
   delay()
@@ -23,7 +21,6 @@ return
 
 ;3
 LAlt & e::  
-  send, {Alt up}
   direct()
   Send, e
   delay()
