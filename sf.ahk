@@ -4,30 +4,35 @@
 #SingleInstance force
 
 ;1
-LAlt & q::  
+LAlt & q::
+  send, {Alt up}
   direct()
   Send, q  
-  Reload  
+  delay()
+  Send, {%attack%}  
 return 
 
 ;2
 LAlt & w::  
+  send, {Alt up}
   direct()
   Send, w
-  Reload  
+  delay()
+  Send, {%attack%}  
 return
 
 ;3
 LAlt & e::  
+  send, {Alt up}
   direct()
   Send, e
-  Reload  
+  delay()
+  Send, {%attack%}  
 return
 
 LAlt & r::
-  Send, 0      
-  ; Sleep, 0 
-  Sleep, 830 // 830 is an exact delay 
+  Send, 0     
+  Sleep, 830 ; 830 is an exact delay 
   Send, { Space }  
   Send, t
   Sleep, 200

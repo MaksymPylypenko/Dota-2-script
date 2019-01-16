@@ -24,6 +24,7 @@ global ability5 = "f"
 global ability6 = "r"
 
 global directional_move = "v"
+global attack = "g"
 
 ; Use Window Spy to find your coordinates
 
