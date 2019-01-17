@@ -23,7 +23,7 @@ Autohotkey scripts.
 #### Right click spammer.
 > LWin 
 
-#### Extra hotkey
+#### Extra hotkey.
 > CapsLock
 - capslock is remmaped to `/`.
 - can be used as an extra hotkey.
@@ -128,7 +128,7 @@ Examples of using:
 - It is also not obvious wether we will be able to return an enemy or not (can always get stunned). Use it wisely.
 
 #### X-mark into ghostship into torrent combo:
-> alt + f 
+> ~~alt + f~~
 - This combo is more situational and is much easier to execute by hand.
 - Simply use ghost ship, return with x-mark when it almost hits and immedietly use torrent.
 - I would not reccomend using a script for this one ... 
