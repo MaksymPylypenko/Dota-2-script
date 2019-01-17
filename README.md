@@ -65,8 +65,9 @@ Examples of using:
   
 #### Blink-safe boulder smash 
 > alt + q 
-- Uses boulder smash.
-- Prevents placing a stone in a previous location after using blink (need to have a small delay).
+- Places a stone and uses boulder smash.
+- There is a small delay to avoid a selfcast bug after using blink dagger.
+    - if stone is placed too quickly after blink it will be placed on the old location 
 
 #### 1 stone 2 spells 
 > alt + w 
@@ -80,10 +81,15 @@ Examples of using:
 </h2>
 
 #### Directed raze 
-> alt + q
-- directs the hero and uses raze. 
-- usefull when standing near edges. 
-- works similarly for q, w, e. 
+> alt + q 
+
+> alt + w 
+
+> alt + e
+
+- uses directional move to direct the hero, follows with raze and attack hotkey
+- there is a 100 ms delay after directional move for proper execution during autoattack 
+    - otherwise the directional move click could be ignored 
 
 
 <h2>Tinker3.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/1/1b/Tinker_minimap_icon.png?version=0a42750ce18979d6d476eed5a2c7bcc4">
