@@ -125,6 +125,11 @@ delay()
   Sleep, 50
 }
 
+long_delay()
+{	
+  Sleep, 100
+}
+
 
 ; Directional move + right click
 direct()
