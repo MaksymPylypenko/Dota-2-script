@@ -6,6 +6,7 @@
 ;1
 LAlt & q::
   direct()
+  long_delay()
   Send, q  
   delay()
   Send, {%attack%}  
@@ -14,6 +15,7 @@ return
 ;2
 LAlt & w::  
   direct()
+  long_delay()
   Send, w
   delay()
   Send, {%attack%}  
@@ -22,6 +24,7 @@ return
 ;3
 LAlt & e::  
   direct()
+  long_delay()
   Send, e
   delay()
   Send, {%attack%}  
