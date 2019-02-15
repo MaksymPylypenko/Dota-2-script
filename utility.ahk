@@ -313,29 +313,27 @@ return
 ; Click the courier control > icon in the right bottom corner.
 ; If there are any teamates on the list, click on the first one.
 
+
 LAlt & `::
 {
+	; 1680x900	
+	courX1 = 1514	   
+	courY1 = 875	 
+	courY2 = 816  
+
+	; 1920x1080
+	; global courX1 = 1890	   
+	; global courY1 = 1080	 
+	; global courY2 = 968 
+	
 	mousegetpos,x,y
 	
-	; Click on the courier icon 
+	Click, right, %courX1%, %courY1% 	; Click on the courier icon 	 
 	
-	Click, right, 1514, 875 ; 1680x900		
-	;Click, right, 1890, 1500 ; 1920x1080   
 	
-	; Check coordinates of the 1st ally 
-	
-	MouseMove, 1514, 816  	; 1680x900		
-	;MouseMove, 1890, 968 	; 1920x1080   
-	
-	Sleep, 250
-	
-	PixelGetColor, check, 1514, 816, RGB ; 1680x900	
-	; PixelGetColor, check, 1890, 968, RGB ; 1920x1080   		
-	if check != 0xEAE9E91
-	{
-		Click, 1514, 816 ; 1680x900	
-		; Click, 1890, 968 ; 1920x1080  
-	}	
+	MouseMove, %courX1%, %courY2%		
+	Sleep, 250		
+	Click, %courX1%, %courY2%			; Click on the 1st ally 
 	
 	mousemove,%x%,%y%
 }
