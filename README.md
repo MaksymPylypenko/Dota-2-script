@@ -6,7 +6,7 @@ Allows players with a little knowledge of Autohotkey to perfom effective actions
 * You might need to change some global variables in **utility.ahk** to match your in-game hotkeys, since there is no user interface yet.
 * Some scripts use pixel data directly from the screen. You might need to use Window Spy to find your own locations and colours if:    
     * Your resolution is not 1600 x 900.
-    * Your rendering API is not Direct 3D -dx9 (e.g. OpenGl, Vulkan).
+    * Your rendering API is not Direct3D -dx9 (e.g. OpenGl, Vulkan).
 
 ## Set-up
 - You need to have [**AutoHotkey**](https://autohotkey.com/download/) installed to execute **.ahk** files.
@@ -14,53 +14,31 @@ Allows players with a little knowledge of Autohotkey to perfom effective actions
 ## Default hotkeys:
 
 #### Pause / unpause the script.
+You can freeze the script, if something went horribly wrong :)
 > Numpad0
 
 #### Switch between custom scripts. 
+Assign your most frequently used scripts in **utility.ahk**.
 > Numpad2 - Numpad9 
 
 #### Reset to default script.
+The default script has no special hotkeys.
 > Numpad1 
 
 #### Right click spammer.
+You can steal the rune or block creeps with this. Can be affected by your ping and network quality.
 > LWin 
 
 #### Extra hotkey.
+Capslock can be used as an extra hotkey. Remmaped to `/`.
 > CapsLock
-- capslock is remmaped to `/`.
-- can be used as an extra hotkey.
 
 #### Resend a courier to the next available teammate.
 `requires proper coordinates and pixel colours`
+
 > ALT + ~ 
-
-## Default functions:
-  
-#### Repeater( key, host )
-Repeats the same key with a 50 ms delay. Can be affected by your ping and network quality.
-
-Examples of using:
-* pickup rune or aegis. 
-* blink after rearm.
-
-#### Direct( )
-A "quick" directional move. Instead of holding a key before cliking, just click once. Mostly used in directItem( i ) and directAbility( i ).
-
-Examples of using:
-* raze on shadow fiend. 
-* jump on slark / mirana.
-* rp on magnus. 
-* forcestuff.
-
-#### Backpack( i ) 
-`requires proper coordinates`
-Uses drag(x1,y1,x2,y2) to move an item with a cursor. Allows to quickly use an item from a backpack (near fontain / shop). Alternative version - backpackL( i ), it restores mouse position at the end. 
-
-There are also item( i ) and ability ( i ) for convinience. They simply use an item or ability at index i. Mapped to hotkeys in a config section.
-
-Examples of using:
-* bottle on any hero (as 7th slot) near fontain.
-* bkb on spectre (as 7th slot) near fontain. 
+1. Click the courier control `>` icon in the right bottom corner.
+2. If there are any teamates on the list, click on the first one.
 
 
 <h2>Earth.ahk  <img style="-webkit-user-select: none;" src="https://gamepedia.cursecdn.com/dota2_gamepedia/1/1f/Earth_Spirit_minimap_icon.png?version=9e06c5eb04270e8e24af9dd157f87b53"> 
