@@ -4,18 +4,17 @@ I_Icon = icons/arc.png
 #SingleInstance force
 
 
-; Select 3 elements
 LAlt & z::
   mousegetpos,x,y	; save mouse position
   Send {LShift Down}
-  click, 514 803
+  click, 514 803 
   Sleep, 100
   Send {LShift Up}
   
   Sleep, 100
   
   Send { LCtrl Down}
-  send a
+  send a				; put YOUR BIND HOTKEY for book 2   
   Sleep, 100
   Send { LCtrl Up}
   mousemove x,y
@@ -31,7 +30,7 @@ LAlt & x::
   Sleep, 100
   
   Send { LCtrl Down}
-  send s
+  send s 				; put YOUR BIND HOTKEY for book 2   
   Sleep, 100
   Send { LCtrl Up}
   mousemove x,y
