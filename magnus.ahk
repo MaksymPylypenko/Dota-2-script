@@ -3,7 +3,7 @@
 #Include %A_ScriptDir%/utility.ahk
 #SingleInstance force
 
-r::  
+LAlt & r::  
 	directedAbility(6)	
 return
 

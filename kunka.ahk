@@ -7,8 +7,9 @@
 ; torrent during x
 LAlt & d::  
   Send, q
-  sleep, 1200
+  sleep, 1600
   Send, e
+  Send, {%attack%}    
   Reload
 return
 

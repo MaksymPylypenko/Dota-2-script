@@ -30,11 +30,13 @@ LAlt & e::
   Send, {%attack%}  
 return
 
-LAlt & r::
+LAlt & d::
+  direct()
   Send, 0     
   Sleep, 830 ; 830 is an exact delay 
   Send, { Space }  
   Send, t
-  Sleep, 200
+  delay() ; rotational delay 
   Send, r  
 return
+

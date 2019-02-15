@@ -82,12 +82,12 @@ ExitApp
 return
 
 ^Numpad6:: 
-Run "arc.ahk" 
+Run "ember.ahk" 
 ExitApp
 return
 
 ^Numpad7:: 
-Run "magnus.ahk" 
+Run "arc.ahk" 
 ExitApp
 return
 
