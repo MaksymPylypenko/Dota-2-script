@@ -1,4 +1,6 @@
-﻿#NoEnv
+﻿; Default script
+
+#NoEnv
 #SingleInstance force
 SendMode Input 
 SetWorkingDir %A_ScriptDir%  
@@ -10,7 +12,7 @@ SetCapsLockState, Off
 ;=======================================================================
 
 global item1 = "z"
-global item2 = "x"
+global item2 = "0"
 global item5 = "c"
 global item4 = "t"
 global item3 = "WheelUP"
@@ -25,10 +27,11 @@ global ability6 = "r"
 
 global directional_move = "v"
 global attack = "g"
+global stop = "space"
 
 ; Use Window Spy to find your coordinates
 
-; 1600 x 900
+; 1600 x 900 Direct3D -dx9
 global x1 = 950	   	; 1st column
 global x2 = 1000	; 2nd column
 global x3 = 1055	; 3d column
@@ -45,7 +48,7 @@ global y3 = 880     ; 3d row - backpack
 ; global y3 = 1055    ; 3d row - backpack	  
 
 
-; Switcher
+; Switcher - assign your most frequently used scripts
 ;=======================================================================
 
 I_Default = icons/dota2.png
@@ -101,10 +104,17 @@ Run "kunka.ahk"
 ExitApp
 return
 
+
 ; Functions
 ;=======================================================================
 
-; Repeater 
+; Repeater
+; --------------------------------------------
+; Repeats the key when a host is pressed.
+; Can be affected by your ping and network quality.
+; Usage: see repeater("RButton","LWin")
+
+
 repeater(key, host)
 {	
   Loop
@@ -118,6 +128,9 @@ repeater(key, host)
 
 
 ; Human delay
+; --------------------------------------------
+; Hotkeys should normally have a delay to be proccessed correctly in dota
+
 delay()
 {	
   ; Random, delay, 50,  100
@@ -131,14 +144,42 @@ long_delay()
 }
 
 
-; Directional move + right click
+; Quick directional move
+; --------------------------------------------
+; You would normally hold a key and then click if you want to use a directional move compare to just clicking when doing quick attack/follow commands. 
+; direct() allows you to click once. 
+;
+; Examples of using:
+; * raze on shadow fiend. 
+; * jump on slark / mirana.
+; * rp on magnus. 
+; * forcestuff.
+
 direct()
 {  	
   Send, {%directional_move% Down}{Click, R}{%directional_move% Up}       
 }
 
+directedAbility(i)  
+{  
+  direct()
+  sleep, 50
+  ability(i)    
+}
+
+directedItem(i)  
+{  
+  direct()
+  sleep, 50
+  item(i)    
+}
+
 
 ; Drag item
+; --------------------------------------------
+; Allows to move items on a screen from position x1y1 to position x2y2
+; Usage: see backpack(i)
+
 drag(x1,y1,x2,y2)
 { 		
 	;Sleep,200
@@ -151,7 +192,10 @@ dragr(x2,y2,x1,y1)
 }
 
 
-; Press item/ability
+; Press item
+; --------------------------------------------
+; Mapped to hotkeys in a config section.
+
 item(i)
 {	
 	delay()
@@ -168,7 +212,11 @@ item(i)
     else if i = 6	
 		Send, {%item6%}	
 }
+
 ; Press ability
+; --------------------------------------------
+; Mapped to hotkeys in a config section.
+
 ability(i)
 {		
 	delay()
@@ -187,24 +235,14 @@ ability(i)
 }
 
 
-; Direct hero first, then use ability/item
-; to bind use "$<key>::<sequence>" 
-; if alt is pressed, direct() doesn't work
-directedAbility(i)  
-{  
-  direct()
-  sleep, 50
-  ability(i)    
-}
-directedItem(i)  
-{  
-  direct()
-  sleep, 50
-  item(i)    
-}
+; Backpack 
+; --------------------------------------------
+; Allows to quickly use an item from a backpack (near fontain / shop). 
+;
+; Examples of using:
+; * bottle on any hero (as 7th slot) near fontain.
+; * bkb on spectre (as 7th slot) near fontain. 
 
-
-; use item from backpack
 backpack(i)
 {	
 	if i = 1
@@ -230,21 +268,26 @@ backpack(i)
 }
 backpackL(i)
 {
-	mousegetpos,x,y
+	mousegetpos,x,y   	; store mouse position 
 	backpack(i)
-	mousemove,%x%,%y%
+	mousemove,%x%,%y% 	; restore mouse position
 }
 
 
 ; Default hotkeys for all other scripts 
 ;=======================================================================
 
-
+; Extra hotkey.
+; --------------------------------------------
 ; If you remap Capslock, you can use it as an extra hotkey
+
 CapsLock:: /
 
 
 ; Pause / Unpause Script
+; --------------------------------------------
+; You can freeze the script, if something went horribly wrong :)
+
 Numpad0::
     suspend
 	SoundPlay, sounds/scan.mp3	
@@ -256,27 +299,34 @@ return
 
 
 ; Right click spammer (10ms delay)
+; --------------------------------------------
+; LWin is pressed, Righclick is pressed every 10 ms 
+; You can steal the rune or block creeps with this. 
+
 $LWin::  
   repeater("RButton","LWin")	 
 return
 
 
-
 ; Resend courier to the next available teamate
-; This is valid for 1600 x 900 only 
+; --------------------------------------------
+; Click the courier control > icon in the right bottom corner.
+; If there are any teamates on the list, click on the first one.
+
 LAlt & `::
 {
 	mousegetpos,x,y
 	
 	; Click on the courier icon 
 	
-	;Click, right, 1514, 875 ; 1680x900		
-	Click, right, 1890, 1500 ; 1920x1080   
+	Click, right, 1514, 875 ; 1680x900		
+	;Click, right, 1890, 1500 ; 1920x1080   
 	
 	; Check coordinates of the 1st ally 
 	
 	MouseMove, 1514, 816  	; 1680x900		
-	; MouseMove, 1890, 968 	; 1920x1080   
+	;MouseMove, 1890, 968 	; 1920x1080   
+	
 	Sleep, 250
 	
 	PixelGetColor, check, 1514, 816, RGB ; 1680x900	
@@ -286,10 +336,14 @@ LAlt & `::
 		Click, 1514, 816 ; 1680x900	
 		; Click, 1890, 968 ; 1920x1080  
 	}	
+	
 	mousemove,%x%,%y%
 }
 return
 
+
+; Pick a hero using console 
+; --------------------------------------------
 
 ; dota_select_hero npc_dota_hero_grimstroke
 ; Left::
