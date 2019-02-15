@@ -1,11 +1,11 @@
 # Dota-2-script
-Autohotkey scripts.
+Allows players with a little knowledge of Autohotkey to perfom effective actions in Dota 2 without breaking into the game files.
 
 ## Concerns 
 * Autohotkey scripts are currently **prohibited** in proffesional dota 2 games.
-* You might need to change some global variables in **utility.ahk** to match your in-game hotkey, since there is no user interface yet.
+* You might need to change some global variables in **utility.ahk** to match your in-game hotkeys, since there is no user interface yet.
 * Some scripts use pixel data directly from the screen. You might need to use Window Spy to find your own locations and colours if:    
-    * Your resolution is not 1600 x 900
+    * Your resolution is not 1600 x 900.
     * Your rendering API is not Direct 3D -dx9 (e.g. OpenGl, Vulkan).
 
 ## Set-up
@@ -53,7 +53,8 @@ Examples of using:
 * forcestuff.
 
 #### Backpack( i ) 
-Uses drag(x1,y1,x2,y2) to move an item with a cursor (requires proper coordinates). Allows to quickly use an item from a backpack (near fontain / shop). Alternative version - backpackL( i ), it restores mouse position at the end. 
+`requires proper coordinates`
+Uses drag(x1,y1,x2,y2) to move an item with a cursor. Allows to quickly use an item from a backpack (near fontain / shop). Alternative version - backpackL( i ), it restores mouse position at the end. 
 
 There are also item( i ) and ability ( i ) for convinience. They simply use an item or ability at index i. Mapped to hotkeys in a config section.
 
@@ -69,7 +70,7 @@ Examples of using:
 > alt + q 
 - Places a stone and uses boulder smash.
 - There is a small delay to avoid a selfcast bug after using blink dagger.
-    - if stone is placed too quickly after blink it will be placed on the old location 
+    - if stone is placed too quickly after blink, it will be placed on the old location. 
 
 #### 1 stone 2 spells 
 > alt + w 
@@ -89,9 +90,7 @@ Examples of using:
 
 > alt + e
 
-- uses directional move to direct the hero, follows with raze and attack hotkey
-- there is a 100 ms delay after directional move for proper execution during autoattack 
-    - otherwise the directional move click could be ignored 
+- uses directional move to direct the hero, follows with a raze and an attack hotkey
 
 
 <h2>Tinker3.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/1/1b/Tinker_minimap_icon.png?version=0a42750ce18979d6d476eed5a2c7bcc4">
@@ -115,17 +114,11 @@ Examples of using:
 
 <h2>Kunka.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/5/5b/Kunkka_minimap_icon.png?version=e9293220d87c521d719f05dec9bcd668">
 </h2>
-
-#### Timings: 
-- 4000 ms - max duration of x-mark.  
-- 400 ms - torrent, x-mark cast animation. 
-- 1600 + 400 = 2000 ms - effective impact delay for torrent. 
-- 2000 - 400 = 1600 ms - wait after torrent to return with x-mark.
-- 4000 - 1600 = 2400 ms - the longest possible time to use gapless torrent after using x-mark (no return). 
+ 
 #### X-mark into torrent combo:
 > alt + d 
-- The script uses torrent and waits exectly 1600 ms to return an enemy with x-mark. 
-- Keep in mind that you are not allowed to wait longer than 2400 ms for proper execution.  
+- Use torrent and wait exectly 1600 ms to return an enemy with x-mark. 
+- The **latest time** to return is **2000ms** out of 4000ms, after this point the return cast animation will be interrupted and the torrent will be 0-400 ms (cast animation) late.
 
 <h2>Arc.ahk  <img style="-webkit-user-select: none;" src="https://gamepedia.cursecdn.com/dota2_gamepedia/e/e9/Arc_Warden_minimap_icon.png?version=5ba1cba6ca6321a6232dfdce6eb90a4f">
 </h2>
