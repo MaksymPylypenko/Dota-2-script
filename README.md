@@ -4,7 +4,9 @@ Autohotkey scripts.
 ## Concerns 
 * Autohotkey scripts are currently **prohibited** in proffesional dota 2 games.
 * You might need to change some global variables in **utility.ahk** to match your in-game hotkey, since there is no user interface yet.
-* Some scripts compare pixels on the screen. Unless your resolution is 1600 x 900, you might need to use Window Spy to find your own locations and colours. Unfortunately, pixels may also have different values depending on the graphics API used (directX, OpenGl, Vulkan).
+* Some scripts use pixel data directly from the screen. You might need to use Window Spy to find your own locations and colours if:    
+    * Your resolution is not 1600 x 900
+    * Your rendering API is not Direct 3D -dx9 (e.g. OpenGl, Vulkan).
 
 ## Set-up
 - You need to have [**AutoHotkey**](https://autohotkey.com/download/) installed to execute **.ahk** files.
@@ -60,7 +62,7 @@ Examples of using:
 * bkb on spectre (as 7th slot) near fontain. 
 
 
-<h2>Earth.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/1/1f/Earth_Spirit_minimap_icon.png?version=338508a1c39498cee5fa3bb7f6aaf2c7"> 
+<h2>Earth.ahk  <img style="-webkit-user-select: none;" src="https://gamepedia.cursecdn.com/dota2_gamepedia/1/1f/Earth_Spirit_minimap_icon.png?version=9e06c5eb04270e8e24af9dd157f87b53"> 
 </h2>
   
 #### Blink-safe boulder smash 
@@ -77,7 +79,7 @@ Examples of using:
   - also not possible to replicate slow to other heroes under magnetize. 
 
 
-<h2>Sf.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/0/00/Shadow_Fiend_minimap_icon.png?version=e23a8fbdbc353ca25c2e169ee2ee195e"> 
+<h2>Sf.ahk  <img style="-webkit-user-select: none;" src="https://gamepedia.cursecdn.com/dota2_gamepedia/0/00/Shadow_Fiend_minimap_icon.png?version=3a4cbd25ad1fa5d0051e4ecb2991acff"> 
 </h2>
 
 #### Directed raze 
@@ -123,13 +125,22 @@ Examples of using:
 #### X-mark into torrent combo:
 > alt + d 
 - The script uses torrent and waits exectly 1600 ms to return an enemy with x-mark. 
-- However, you should keep in mind that you are not allowed to wait longer than 2400 ms for proper execution.  
-- Note that x-mark debuff duration can be checked by clicking the unit on which it is applied. 
-- It is also not obvious wether we will be able to return an enemy or not (can always get stunned). Use it wisely.
+- Keep in mind that you are not allowed to wait longer than 2400 ms for proper execution.  
 
-#### X-mark into ghostship into torrent combo:
-> alt + f
-- This combo is more situational and is much easier to execute by hand.
-- Simply use ghost ship, return with x-mark when it almost hits and immedietly use torrent.
-- I would not reccomend using a script for this one ... 
+<h2>Arc.ahk  <img style="-webkit-user-select: none;" src="https://gamepedia.cursecdn.com/dota2_gamepedia/e/e9/Arc_Warden_minimap_icon.png?version=5ba1cba6ca6321a6232dfdce6eb90a4f">
+</h2>
 
+`requires proper coordinates`
+
+`turn on autoselect summoned units`
+
+#### The issue: 
+Arc's and Tempest Double's necro book can not be pernamently assigned to different hot-keys. Thus, it is not trivial to send both necro books on different camps relatively quickly.
+
+#### Quick bind:
+If you have a hero and 2 summons selected, deselects the first unit (e.g. Arc or Tempest Double) and binds the rest to a specific hotkey.
+
+> alt + z 
+- bind book 1 to `A`
+> alt + x 
+- bind book 2 to `S`
