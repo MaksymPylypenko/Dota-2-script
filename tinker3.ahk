@@ -37,14 +37,14 @@ Set1600x900(void)
 	global	
 	soulring1X := 938
 	soulring1Y := 793
-	soulring1C_cool_down := 0x1D1D24
-	soulring1C_active := 0x49486A
+	soulring1C_cool_down := 0x1D1D24    ; cool down soul ring black pixel on slot 1
+	soulring1C_active := 0x49486A		; active soul ring black pixel on slot 1
 	bottle2X := 992
-	bottle2Y := 792
-	bottle2C := 0xB21211
+	bottle2Y := 792						
+	bottle2C := 0xB21211				; bottle red pixel on slot 2 
 	bottle6X := 1045
 	bottle6Y := 835
-	bottle6C := 0x640B0C
+	bottle6C := 0x640B0C				; bottle red pixel on slot 6 
 	return
 }
 
@@ -75,6 +75,7 @@ LAlt & d::
 	Set1600x900(void)
 	
 	Send {Shift Down}
+	delay() 
 	mousegetpos,x,y	; save mouse position
 	
 	; find bottle and use it 		
@@ -104,7 +105,7 @@ LAlt & d::
 		backpackL(2)
 	}
 	
-	; what about soul-ring?
+	; I assume there is 1 possible position for a soul ring 
 	soulringIndex = -1
 	soulringActive = -1
 		
