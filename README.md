@@ -106,7 +106,7 @@ Capslock can be used as an extra hotkey. Remmaped to `/`.
 `turn on autoselect summoned units`
 
 #### The issue: 
-Arc's and Tempest Double's necro book can not be pernamently assigned to different hot-keys. Thus, it is not trivial to send both necro books on different camps relatively quickly.
+Arc's and Tempest Double's necro book can not be pernamently assigned to different hotkeys. Thus, it is not trivial to send both necro books on different camps relatively quickly.
 
 #### Quick bind:
 If you have a hero and 2 summons selected, deselects the first unit (e.g. Arc or Tempest Double) and binds the rest to a specific hotkey.
