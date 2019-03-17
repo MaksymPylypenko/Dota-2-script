@@ -90,7 +90,7 @@ Capslock can be used as an extra hotkey. Remmaped to `/`.
 4. pickup dropped items in the original order (hopefully).
 
 
-<h2>Kunka.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/5/5b/Kunkka_minimap_icon.png?version=e9293220d87c521d719f05dec9bcd668">
+<h2>Kunka.ahk  <img style="-webkit-user-select: none;" src="https://gamepedia.cursecdn.com/dota2_gamepedia/5/5b/Kunkka_minimap_icon.png?version=129fa68f4df72aba24f753124e3d463e">
 </h2>
  
 #### X-mark into torrent combo:
