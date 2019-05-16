@@ -3,11 +3,11 @@ Allows players with a little knowledge of Autohotkey to perfom effective actions
 
 ## Concerns 
 * Autohotkey scripts are currently **prohibited** in proffesional dota 2 games.
-* You might need to change some global variables in **utility.ahk** to match your in-game hotkeys, since there is no user interface yet.
+* You might need to change some global variables in **utility.ahk** to match your in-game hotkeys.
 * Some scripts use pixel data directly from the screen. You might need to use Window Spy to find your own locations and colours if:    
     * Your resolution is not 1600 x 900.
-    * Your rendering API is not Direct3D -dx9 (e.g. OpenGl, Vulkan).
-
+    * Your renderer is not Direct3D -dx9 (e.g. OpenGl, Vulkan).
+    
 ## Set-up
 - You need to have [**AutoHotkey**](https://autohotkey.com/download/) installed to execute **.ahk** files.
 - To run - open any **.ahk** file. An appropriate icon should appear in the system tray (area near clocks). 
@@ -71,7 +71,7 @@ Capslock can be used as an extra hotkey. Remmaped to `/`.
 - uses directional move to direct the hero, follows with a raze and an attack hotkey
 
 
-<h2>Tinker3.ahk  <img style="-webkit-user-select: none;" src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/1/1b/Tinker_minimap_icon.png?version=0a42750ce18979d6d476eed5a2c7bcc4">
+<h2>Tinker3.ahk  <img style="-webkit-user-select: none;" src="https://gamepedia.cursecdn.com/dota2_gamepedia/1/1b/Tinker_minimap_icon.png?version=90356f5b02c9bdf2c1e56a1f4daaf73b">
 </h2>
 
 `requires proper coordinates and pixel colours`
