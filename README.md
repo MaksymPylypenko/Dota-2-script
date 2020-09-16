@@ -125,6 +125,11 @@ return
 
 > alt + e
 
+<h3><img style="-webkit-user-select: none;" src="https://github.com/MaksymPylypenko/Dota-2-script/blob/master/icons/magnus.png"> magnus.ahk</h2>
+
+#### Directed rp 
+> alt + r 
+
 <h3><img style="-webkit-user-select: none;" src="https://github.com/MaksymPylypenko/Dota-2-script/blob/master/icons/ember.png"> ember.ahk</h2>
 
 #### Fist & Chain combo
