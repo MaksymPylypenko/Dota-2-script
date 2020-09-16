@@ -86,7 +86,7 @@ return
 ```
 
 ## Hero specific scripts
-You can alos create your own custom scripts. Simply create a new `.ahk` in the root directory and import the main script like this:
+You can also create your own custom scripts. Simply create a new `.ahk` in the root directory and import the main script like this:
 ``` Autoit
 #Include %A_ScriptDir%/utility.ahk
 #SingleInstance force
@@ -99,14 +99,14 @@ I_Icon = icons/arc.png
 #### Switching between scripts
 For convenience there are several shortcuts in the main script that switch between scripts. For example, 
 * `Alt`+ `Numpad1` will chnage to **utility.ahk**
-* `Alt`+ `Numpad2` will chnage to **tinker.ahk**
-
 ``` Autoit
 ^Numpad1:: 
 Run "utility.ahk" 
 ExitApp
 return
-
+```
+* `Alt`+ `Numpad2` will chnage to **tinker.ahk**
+``` Autoit
 ^Numpad2:: 
 Run "tinker.ahk" 
 ExitApp
