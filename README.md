@@ -1,7 +1,7 @@
 # Dota-2-script
 An alternative to in-game cfg scripts. 
 
-## Utility.ahk
+<h3><img style="-webkit-user-select: none;" src="https://github.com/MaksymPylypenko/Dota-2-script/blob/master/icons/dota2.png"> Utility.ahk</h3>
 This file contains scripts that can be used in every game. Make sure you have Autohotkey installed and your ingame hotkeys are set properly in the script.
 
 ### A quick way to save roshan's respawn time
@@ -60,7 +60,7 @@ CapsLock:: /
 ### Repeater
 Repeats a click or a button every 25ms. Usage examples:
 1. pick up runes/aegis.
-2. steal items/runes/aegis using ember's w
+2. steal items/runes/aegis during ember's w
 3. creep block
 4. blink after rearm on tinker
 ``` Autoit
@@ -86,6 +86,32 @@ return
 ```
 
 ## Hero specific scripts
+You can alos create your own custom scripts. Simply create a new `.ahk` in the root directory and import the main script like this:
+``` Autoit
+#Include %A_ScriptDir%/utility.ahk
+#SingleInstance force
+```
+You may also add a new icon:
+``` Autoit
+I_Icon = icons/arc.png
+```
+
+#### Switching between scripts
+For convenience there are several shortcuts in the main script that switch between scripts. For example, 
+* `Alt`+ `Numpad1` will chnage to **utility.ahk**
+* `Alt`+ `Numpad2` will chnage to **tinker.ahk**
+
+``` Autoit
+^Numpad1:: 
+Run "utility.ahk" 
+ExitApp
+return
+
+^Numpad2:: 
+Run "tinker.ahk" 
+ExitApp
+return
+```
 
 <h3><img style="-webkit-user-select: none;" src="https://github.com/MaksymPylypenko/Dota-2-script/blob/master/icons/earthspirit.png"> earth.ahk</h3>
   
