@@ -2,7 +2,7 @@
 
 #NoEnv
 #SingleInstance force
-SendMode Input 
+SendMode Input
 SetWorkingDir %A_ScriptDir%  
 SetNumlockState, AlwaysOn
 SetCapsLockState, Off
@@ -25,7 +25,8 @@ global ability4 = "d"
 global ability5 = "f"
 global ability6 = "r"
 
-global directional_move = "v"
+global directional_move = "h"
+global patrol_move = "b"
 global attack = "g"
 global stop = "space"
 
@@ -119,11 +120,14 @@ repeater(key, host)
 {	
   Loop
   { 
-	Send, {%key%}
-    sleep 10
-    If (!GetKeyState(host,"p"))
-      break
+	Send, {%key%}	
+	Sleep, 25
+	If !getkeystate("Alt","p") 
+		break
+	if !GetKeyState(host,"p")
+		break
   } 
+  Reload
 }
 
 
@@ -159,6 +163,13 @@ direct()
 {  	
   Send, {%directional_move% Down}{Click, R}{%directional_move% Up}       
 }
+
+patrol()
+{  	
+  Send, {%patrol_move%}{Click}     
+ ; Send, {Click}
+}
+
 
 directedAbility(i)  
 {  
@@ -277,11 +288,16 @@ backpackL(i)
 ; Default hotkeys for all other scripts 
 ;=======================================================================
 
-; Extra hotkey.
+; Extra hotkeys
 ; --------------------------------------------
 ; If you remap Capslock, you can use it as an extra hotkey
 
 CapsLock:: /
+
+$LWin::  
+  ; repeater("RButton","LWin")
+  Send, m
+return
 
 
 ; Pause / Unpause Script
@@ -300,13 +316,29 @@ return
 
 ; Right click spammer (10ms delay)
 ; --------------------------------------------
-; LWin is pressed, Righclick is pressed every 10 ms 
+; Righclick is pressed every 10 ms 
 ; You can steal the rune or block creeps with this. 
 
-$LWin::  
-  repeater("RButton","LWin")	 
-return
+; ~XButton1::
+	; repeater("RButton","XButton1")
+; return 
 
+
+; Quick directional move
+; --------------------------------------------
+ XButton2::
+	direct()
+ return 
+
+; $~XButton1::
+    ; send {LAlt down}
+    ; keyWait, XButton1
+	; send {LAlt up}
+; return 
+
+LAlt & g::
+	repeater("RButton","g")
+return
 
 ; Resend courier to the next available teamate
 ; --------------------------------------------
@@ -340,15 +372,29 @@ LAlt & `::
 return
 
 
-; Pick a hero using console 
+; Save roshan timing
 ; --------------------------------------------
 
-; dota_select_hero npc_dota_hero_grimstroke
-; Left::
-    ; While GetKeyState("Left","p")
-    ; {
-        ; Send, {Up}
-		; Send, {Enter}
-        ; Sleep, 10
-    ; }    
-; return
+LControl & /::
+	Send, ^a
+	Send, ^c
+	Sleep, 100
+	variable := clipboard
+	
+	if(strlen(variable)<6){
+		StringSplit, time, variable, :,
+		s := time2
+		m1 := time1+5
+		m2 := m1+3
+		m3 := m2+3
+		
+		variable = expires %m1%:%s%, respawns %m2%:%s%-%m3%:%s% 
+		
+		Send, ^a
+		Send, %variable%
+		Clipboard := variable   ; update clipboard
+	}
+	
+return
+
+
