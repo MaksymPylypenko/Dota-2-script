@@ -3,24 +3,11 @@
 #Include %A_ScriptDir%/utility.ahk
 #SingleInstance force
 
-
+; Fist --> Chain combo
+; Make sure the hero is watching towards the enemy and there is no rotational animation.
+; A directional move may help direct the hero. 
 LAlt & q::    
-; a::
-  ; direct()
-  ; Sleep, 200
   Send, w
   Sleep, 100
   Send, q
-return
-
-LAlt & r::  
-  ;direct()
-  Sleep, 100
-  Send, w
-  
-  Sleep, 100
-  Send, r
-  ; Sleep, 100
-  ; Send, d
-  
 return

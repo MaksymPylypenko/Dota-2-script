@@ -60,18 +60,17 @@ IfNotExist, %I_Icon%
   Menu, Tray, Icon, %I_Default%
 
 ^Numpad1:: 
-I_Icon = icons/invoker.png
 Run "utility.ahk" 
 ExitApp
 return
 
 ^Numpad2:: 
-Run "tinker3.ahk" 
+Run "tinker.ahk" 
 ExitApp
 return
 
 ^Numpad3:: 
-Run "inv.ahk" 
+Run "invoker.ahk" 
 ExitApp
 return
 
@@ -340,37 +339,6 @@ LAlt & g::
 	repeater("RButton","g")
 return
 
-; Resend courier to the next available teamate
-; --------------------------------------------
-; Click the courier control > icon in the right bottom corner.
-; If there are any teamates on the list, click on the first one.
-
-
-LAlt & `::
-{
-	; 1680x900	
-	courX1 = 1514	   
-	courY1 = 875	 
-	courY2 = 816  
-
-	; 1920x1080
-	; global courX1 = 1890	   
-	; global courY1 = 1080	 
-	; global courY2 = 968 
-	
-	mousegetpos,x,y
-	
-	Click, right, %courX1%, %courY1% 	; Click on the courier icon 	 
-	
-	
-	MouseMove, %courX1%, %courY2%		
-	Sleep, 250		
-	Click, %courX1%, %courY2%			; Click on the 1st ally 
-	
-	mousemove,%x%,%y%
-}
-return
-
 
 ; Save roshan timing
 ; --------------------------------------------
@@ -379,22 +347,18 @@ LControl & /::
 	Send, ^a
 	Send, ^c
 	Sleep, 100
-	variable := clipboard
-	
+	variable := clipboard	
 	if(strlen(variable)<6){
 		StringSplit, time, variable, :,
 		s := time2
 		m1 := time1+5
 		m2 := m1+3
-		m3 := m2+3
-		
-		variable = expires %m1%:%s%, respawns %m2%:%s%-%m3%:%s% 
-		
+		m3 := m2+3		
+		variable = expires %m1%:%s%, respawns %m2%:%s%-%m3%:%s% 		
 		Send, ^a
 		Send, %variable%
 		Clipboard := variable   ; update clipboard
-	}
-	
+	}	
 return
 
 
