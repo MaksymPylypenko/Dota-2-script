@@ -7,7 +7,7 @@ This file contains scripts that can be used in every game. Make sure you have Au
 ### A quick way to save roshan's respawn time
 Whenever Roshan dies, click on the time to save it in the chat. When you are not busy type a previously saved time (e.g. `23:13`) in chat and press `LControl` + `/`. Your input will be replaced with `expires 28:13, respawns 31:13-34:13`. This will also be saved to clipboard, so whenever you press ctrl+v you will see the same text. This is helpful since the chat only shows the last few messages and your roshan timing could be lost.
 
-```
+``` Autoit
 LControl & /::
 	Send, ^a
 	Send, ^c
