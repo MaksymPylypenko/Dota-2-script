@@ -157,6 +157,7 @@ This spell can be casted during a rotational animation similar to sf's raze.
 
 #### Fist & Chain combo
 `make sure the hero is watching towards the enemy and there is no rotational animation`
+
 This allows to cast chains from a longer distance.
 * `Alt` + `w`
 
@@ -164,20 +165,25 @@ This allows to cast chains from a longer distance.
 
 #### Blink spam
 `make sure the hero is watching towards the blink direction`
-* `Alt` + `t` will spam a 4th item.
+
+This will spam a 4th item.
+* `Alt` + `t` 
 
 #### Mana regen on base
 `requires proper coordinates and pixel colours`
-* `Alt` + `d` drops items.
-1. drop items (shift queue during rearm).
-2. find bottle and use it.
-3. drop everything that gives you mana.
-* `Alt` + `f` picks up items.
-1. pickup items (after rearm).
-2. find soul-ring and use it.
-3. find bottle and use it.
-4. pickup dropped items in the original order (hopefully).
 
+First step: `Drop`
+  1. drop items (shift queue during rearm).
+  2. find bottle and use it.
+  3. drop everything that gives you mana.
+* `Alt` + `d` 
+
+Second step: `Pick up`
+  1. pickup items (after rearm).
+  2. find soul-ring and use it.
+  3. find bottle and use it.
+  4. pickup dropped items in the original order (hopefully).
+* `Alt` + `f`
 
 <h3><img style="-webkit-user-select: none;" src="https://github.com/MaksymPylypenko/Dota-2-script/blob/master/icons/kunka.png"> kunka.ahk</h3>
  
@@ -188,8 +194,7 @@ Uses torrent and waits exectly 1600 ms to return an enemy with x-mark. The **lat
 <h3><img style="-webkit-user-select: none;" src="https://github.com/MaksymPylypenko/Dota-2-script/blob/master/icons/arc.png"> ark.ahk</h3>
 
 #### Necro book bind:
-`requires proper coordinates`
-`turn on autoselect summoned units`
+`requires proper coordinates` + `turn on autoselect summoned units`
 
 Arc's and Tempest Double's necro book can not be pernamently assigned to different hotkeys. But you can still bind thwm every time you summon them. If you have a hero and 2 summons selected, deselects the first unit (e.g. Arc or Tempest Double) and binds the rest to a specific hotkey.
 
