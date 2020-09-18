@@ -32,7 +32,7 @@ return
 `an ingame directional move hotkey should be assigned in the config`
 
 This is similar to a quick attack / move, but for a directional move. 
-* Pressing `XButton2` will force the hero to move in a straigt line without finding the shortest path.
+* Pressing `XButton2` will force the hero to move in a straigt line without looking for the shortest path.
 ``` Autoit
 XButton2::
 	direct()
@@ -63,7 +63,9 @@ CapsLock:: /
 ```
 
 ### Repeater
-Repeats a click or a button every 25ms. Usage examples:
+Repeats a click or a button every 25ms. 
+
+#### Usage
 1. pick up runes/aegis.
 2. steal items/runes/aegis during ember's w
 3. creep block
