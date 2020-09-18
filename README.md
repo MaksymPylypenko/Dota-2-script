@@ -31,6 +31,7 @@ return
 ### Quick directional move
 This is similar to a quick attack / move, but for a directional move. 
 * Pressing `XButton2` will force the hero to move in a straigt line without finding the shortest path.
+``` Autoit
 XButton2::
 	direct()
  return 
