@@ -31,8 +31,9 @@ return
 ### Quick directional move
 `an ingame directional move hotkey should be assigned in the config`
 
-This is similar to a quick attack / move, but for a directional move. 
-* Pressing `XButton2` will force the hero to move in a straigt line without looking for the shortest path.
+This is similar to a quick attack / move, but for a directional move. It will force the hero to move in a straigt line without looking for the shortest path.
+* `XButton2` 
+
 ``` Autoit
 XButton2::
 	direct()
@@ -63,20 +64,19 @@ CapsLock:: /
 ```
 
 ### Repeater
-Repeats a click or a button every 25ms. 
+This will spam right clicks every 25ms. 
+* `LAlt` + `g` 
 
-#### Usage
-1. pick up runes/aegis.
-2. steal items/runes/aegis during ember's w
-3. creep block
-4. blink after rearm on tinker
-
-* Holding `LAlt` + `g` will spam right click every 25ms. 
 ``` Autoit
 LAlt & g::
    repeater("RButton","g")
 return
 ```
+
+#### Usage
+1. pick up runes/aegis.
+2. steal items/runes/aegis during ember's w
+3. creep block
 
 #### Code
 ``` Autoit
