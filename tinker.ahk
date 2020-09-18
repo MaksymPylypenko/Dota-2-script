@@ -37,14 +37,14 @@ Set1600x900(void)
 	global	
 	soulring1X := 938
 	soulring1Y := 793
-	soulring1C_cool_down := 0x1D1D24    ; cool down soul ring black pixel on slot 1
-	soulring1C_active := 0x49486A		; active soul ring black pixel on slot 1
+	soulring1C_cool_down := 0x9F6F69    ; cool down soul ring black pixel on slot 1
+	soulring1C_active := 0x974512		; active soul ring black pixel on slot 1
 	bottle2X := 992
 	bottle2Y := 792						
-	bottle2C := 0xB21211				; bottle red pixel on slot 2 
+	bottle2C := 0x43A7BD				; bottle red pixel on slot 2 
 	bottle6X := 1045
 	bottle6Y := 835
-	bottle6C := 0x640B0C				; bottle red pixel on slot 6 
+	bottle6C := 0x0E9BBE				; bottle red pixel on slot 6 
 	return
 }
 
