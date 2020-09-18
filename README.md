@@ -172,7 +172,7 @@ This will spam a 4th item.
 #### Mana regen on base
 `requires proper coordinates and pixel colours`
 
-* First step: `Alt` + `d` 
+First step: `Alt` + `d` 
   1. drop items (shift queue during rearm).
   2. find bottle and use it.
   3. drop everything that gives you mana.
