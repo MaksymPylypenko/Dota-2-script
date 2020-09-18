@@ -29,6 +29,7 @@ return
 ```
 
 ### Quick directional move
+`an ingame directional move hotkey should be assigned in the config`
 This is similar to a quick attack / move, but for a directional move. 
 * Pressing `XButton2` will force the hero to move in a straigt line without finding the shortest path.
 ``` Autoit
@@ -41,7 +42,6 @@ XButton2::
  2. Other: forcestuff, placing an obs from trees...
 
 #### Code
-`an ingame directional move hotkey should be assigned in the config`
 ``` Autoit
 global directional_move = "h"
 direct()
