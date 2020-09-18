@@ -132,7 +132,7 @@ This will place a stone and use boulder smash. There is a small delay to avoid a
 #### Invisible stone
 `make sure the hero is watching towards the enemy and there is no rotational animation`
 
-There is a specific timing that allows to push a stone that was just consumed by the earth's spirits roll. This is only usefull if you don't have enough stones or your ultimate is on cooldown. You usually don't want to waste slow duration at the expense of stun duration. Additionally all units under magnetise will share the slow from Q (e.g. Q after R is better).
+There is a specific timing that allows to consume a stone that was just pushed, making the stone invisible and effectively casting 2 spells using 1 stone only. This is only usefull if you don't have enough stones or your ultimate is on cooldown. You usually don't want to waste slow duration at the expense of stun duration. Additionally all units under magnetise will share the slow from Q (that is Q after R is generally better).
 * `Alt` + `w` 
 
 <h3><img style="-webkit-user-select: none;" src="https://github.com/MaksymPylypenko/Dota-2-script/blob/master/icons/sf.png"> sf.ahk</h2>
