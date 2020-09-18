@@ -172,18 +172,16 @@ This will spam a 4th item.
 #### Mana regen on base
 `requires proper coordinates and pixel colours`
 
-First step: `Drop`
+* First step: `Alt` + `d` 
   1. drop items (shift queue during rearm).
   2. find bottle and use it.
   3. drop everything that gives you mana.
-* `Alt` + `d` 
 
-Second step: `Pick up`
+Second step: `Alt` + `f`
   1. pickup items (after rearm).
   2. find soul-ring and use it.
   3. find bottle and use it.
   4. pickup dropped items in the original order (hopefully).
-* `Alt` + `f`
 
 <h3><img style="-webkit-user-select: none;" src="https://github.com/MaksymPylypenko/Dota-2-script/blob/master/icons/kunka.png"> kunka.ahk</h3>
  
