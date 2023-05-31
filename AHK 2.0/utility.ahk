@@ -22,22 +22,23 @@ incrementAndSaveClipboard(delta){
   Send "^x"
   Sleep 50
 
-  variable := SubStr(clipboard, -3)	
-  _minutes := SubStr(variable,-4,2) + 5
-  newSeconds := SubStr(variable,-1,2)
-  newMinutes := SubStr("00" . _minutes,-1)
-  newTime := %newMinutes%%newSeconds%		
-  ;MsgBox % "newTime="newTime
+  clipboard := A_Clipboard
+  _variable := SubStr(clipboard, -4)	
+  _minutes := SubStr(_variable,-4,2) + delta
+  _seconds := SubStr(_variable,-2,2)
+  newMinutes := SubStr("00" . _minutes,-2)
+  newTime :=  newMinutes _seconds		
+  ;MsgBox "newTime=" newTime
 
-  strLen:=StrLen(clipboard)
-  if(strLen<=4){
-    Clipboard := newTime
+  _strLen:=StrLen(clipboard)
+  if(_strLen<=4){
+    A_Clipboard := newTime
   }
   else{
-    restLen :=strLen-4
+    restLen :=_strLen-4
     restStr := SubStr(clipboard, 1, restLen)
-    result := %restStr%%newTime%
-    Clipboard := result
+    result :=  restStr newTime
+    A_Clipboard := result
   }  
 }
 
