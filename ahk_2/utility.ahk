@@ -6,7 +6,32 @@ SetCapsLockState "AlwaysOff"
 TraySetIcon("../icons/idle.png", 1)
 
 config := Object()
+
+; @TODO: set your values here!
 config.directional_move := "h"
+config.attack := "g"
+config.stop := "space"
+config.patrol_move := "b"
+
+^Numpad1::{
+  Run "utility.ahk" 
+  ExitApp
+}
+
+^Numpad2::{
+  Run "invoker.ahk" 
+  ExitApp
+}
+
+^Numpad3::{
+  Run "sf.ahk" 
+  ExitApp
+}
+
+^Numpad4::{
+  Run "earth.ahk" 
+  ExitApp
+}
 
 ; Quick directional move
 direct(){
