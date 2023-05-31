@@ -10,8 +10,7 @@ config.directional_move := "h"
 
 ; Quick directional move
 direct(){
-  ;Send "{%config.directional_move% down}{Click, R}{%config.directional_move% up}" ; doesn't work for some reason... bug?
-  Send "{h down}{Click, R}{h up}"
+  Send "{" config.directional_move " down}{Click R}{" config.directional_move " up}"
 }
 Home::direct()
 
