@@ -58,11 +58,7 @@ incrementAndSaveClipboard(delta){
 #### Usage 
  1. Abilities: slark's pounce, sf's raze, mirana's leap...
  2. Other: forcestuff, placing an obs from trees...
-
-``` Autoit
-Home::direct()
-```
-
+ 
 ``` Autoit
 direct() {  	
   Send "{" config.directional_move " down}{Click R}{" config.directional_move " up}"   
@@ -70,20 +66,23 @@ direct() {
 ``` 
  
 
-### Capslock & LWin remap
-When the script is active the capslock will always be turned off.
-``` Autoit
-SetCapsLockState "AlwaysOff"
-```
-Additionally you can remap it to some other hotkey to avoid writing CAPS in the chat.
+### Hotkey remap
+> You can remap certain hotkeys to prevent them from interfering with the game
 ``` Autoit
 CapsLock:: .
 $LWin::M
 ```
+> Additionaly you can make sure the capslock is always turned off when the script is active
+``` Autoit
+SetCapsLockState "AlwaysOff"
+```
 
 ### Repeater
-This will spam right clicks every 20ms. 
-* `LAlt` + `g` 
+> This will spam right clicks every 20ms when you hold `LAlt` + `g` 
+#### Usage
+1. pick up runes/aegis.
+2. steal items/runes/aegis during ember's w
+3. creep block
 
 ``` Autoit
 !g:: 
@@ -95,11 +94,6 @@ This will spam right clicks every 20ms.
   return
 }
 ```
-
-#### Usage
-1. pick up runes/aegis.
-2. steal items/runes/aegis during ember's w
-3. creep block
 
 
 ## Hero specific scripts
