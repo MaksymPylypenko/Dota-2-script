@@ -250,10 +250,9 @@ backpackL(i)
 ; --------------------------------------------
 ; If you remap Capslock, you can use it as an extra hotkey
 
-CapsLock:: /
+CapsLock:: .
 
 $LWin::  
-  ; repeater("RButton","LWin")
   Send, m
 return
 
@@ -263,8 +262,7 @@ return
 ; You can freeze the script, if something went horribly wrong :)
 
 Numpad0::
-    suspend
-	SoundPlay, sounds/scan.mp3	
+  suspend
 return
 
 LAlt & Numpad0::	
@@ -284,12 +282,9 @@ return
 
 ; Quick directional move
 ; --------------------------------------------
- XButton2::
+ Home::
 	direct()
  return 
-
-
-
 
 ; Save roshan timing
 ; --------------------------------------------
@@ -298,16 +293,19 @@ LControl & /::
 	Send, ^a
 	Send, ^c
 	Sleep, 100
+	Send, ^x
+	Sleep, 100
 	variable := clipboard	
 	if(strlen(variable)<6){
-		StringSplit, time, variable, :,
-		s := time2
-		m1 := time1+5
-		m2 := m1+3
-		m3 := m2+3		
-		variable = %m1%:%s% | %m2%:%s%-%m3%:%s% 		
-		Send, ^a
-		Send, %variable%
+		;StringSplit, time, variable, :,
+		minutes := SubStr(variable,1,2) + 5
+		seconds := SubStr(variable,3,2)
+		aegisExpiryMinutes := SubStr("00" . minutes,-1)
+		; m2 := m1+3
+		; m3 := m2+3		
+		variable = %aegisExpiryMinutes%%seconds%		
+		; Send, ^a
+		; Send, %variable%
 		Clipboard := variable   ; update clipboard
 	}	
 return
