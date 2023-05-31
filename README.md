@@ -1,76 +1,99 @@
 # Dota-2-script
-An alternative to in-game cfg scripts. 
+An alternative to in-game cfg scripts.
 
-<h3><img style="-webkit-user-select: none;" src="https://github.com/MaksymPylypenko/Dota-2-script/blob/master/icons/dota2.png"> Utility.ahk</h3>
-This file contains scripts that can be used in every game. Make sure you have Autohotkey installed and your ingame hotkeys are set properly in the script.
+> Autohotkey v1.1 was deprecated, will eventually move to 2.0. See `./ahk_2`
 
-### A quick way to save roshan's respawn time
-* Whenever Roshan dies, click on the time to save it in the chat. When you are not busy type a previously saved time (e.g. `23:13`) in chat and press `LControl` + `/`. Your input will be replaced with `expires 28:13, respawns 31:13-34:13`. This will also be saved to clipboard, so whenever you press ctrl+v you will see the same text. This is helpful since the chat only shows the last few messages and your roshan timing could be lost.
+<h3><img style="-webkit-user-select: none; width:25px" src="https://github.com/MaksymPylypenko/Dota-2-script/blob/master/icons/idle.png"> Utility.ahk</h3> 
 
-#### Code
+This file contains scripts that can be used in every game.
+
+### A quick way to time aegis expiry or buyback cooldown
+> You can modify the code and make it even more fancy, e.g. by returning `expires 28:13, respawns 31:13-34:13`. But I prefer a minimal version.
+1. Click on the time to save it in the chat. 
+2. When you are not busy, type an optional *label* and a previously *saved time* in chat E.g.
+   * `rosh 2313`
+   * `2313` 
+   * `rosh 2510, am 2313`
+4. Press `LControl` + `Numpad5` (aegis expiry time) or `Numpad8` (buyback cooldown). 
+5. Only the last 4 characters will be considered! The updated time will be saved to your clipboard and you can recover it with `ctrl+v`. 
+   * `rosh 2813`
+   * `2813` 
+   * `rosh 2510, am 3113`
+
 ``` Autoit
-LControl & /::
-	Send, ^a
-	Send, ^c
-	Sleep, 100
-	variable := clipboard	
-	if(strlen(variable)<6){
-		StringSplit, time, variable, :,
-		s := time2
-		m1 := time1+5
-		m2 := m1+3
-		m3 := m2+3		
-		variable = expires %m1%:%s%, respawns %m2%:%s%-%m3%:%s% 		
-		Send, ^a
-		Send, %variable%
-		Clipboard := variable   ; update clipboard
-	}	
-return
+incrementAndSaveClipboard(delta){
+  Send "^a"
+  Sleep 50
+  Send "^x"
+  Sleep 50
+
+  clipboard := A_Clipboard
+  _variable := SubStr(clipboard, -4)	
+  _minutes := SubStr(_variable,-4,2) + delta
+  _seconds := SubStr(_variable,-2,2)
+  newMinutes := SubStr("00" . _minutes,-2)
+  newTime :=  newMinutes _seconds		
+  ;MsgBox "newTime=" newTime
+
+  _strLen:=StrLen(clipboard)
+  if(_strLen<=4){
+    A_Clipboard := newTime
+  }
+  else{
+    restLen :=_strLen-4
+    restStr := SubStr(clipboard, 1, restLen)
+    result :=  restStr newTime
+    A_Clipboard := result
+  }  
+}
 ```
 
 ### Quick directional move
-`an ingame directional move hotkey should be assigned in the config`
+> This is similar to a quick attack / move, but for a directional move. It will force the hero to move in a straigt line without looking for the shortest path.
 
-This is similar to a quick attack / move, but for a directional move. It will force the hero to move in a straigt line without looking for the shortest path.
-* `XButton2` 
+* Make sure your config object includes your ingame directional move hotkey. For example: `config.directional_move := "h"`
+* This should ideally be mapped to a rarely used key, so it doesn't interfer with the chat.
+* One of my mouse hotkeys is mapped to `home`, but you can replace it with XButton1 / XButton2 / LWin etc
 
-``` Autoit
-XButton2::
-	direct()
- return 
-```
 #### Usage 
  1. Abilities: slark's pounce, sf's raze, mirana's leap...
  2. Other: forcestuff, placing an obs from trees...
 
-#### Code
 ``` Autoit
-global directional_move = "h"
-direct()
-{  	
-  Send, {%directional_move% Down}{Click, R}{%directional_move% Up}       
+Home::direct()
+```
+
+``` Autoit
+direct() {  	
+  Send "{" config.directional_move " down}{Click R}{" config.directional_move " up}"   
 }
 ``` 
  
 
-### Capslock remap
+### Capslock & LWin remap
 When the script is active the capslock will always be turned off.
 ``` Autoit
-SetCapsLockState, Off
+SetCapsLockState "AlwaysOff"
 ```
 Additionally you can remap it to some other hotkey to avoid writing CAPS in the chat.
 ``` Autoit
-CapsLock:: /
+CapsLock:: .
+$LWin::M
 ```
 
 ### Repeater
-This will spam right clicks every 25ms. 
+This will spam right clicks every 20ms. 
 * `LAlt` + `g` 
 
 ``` Autoit
-LAlt & g::
-   repeater("RButton","g")
-return
+!g:: 
+{  
+  while GetKeyState("g","P"){
+    SendInput "{RButton}"
+    Sleep 20
+  }
+  return
+}
 ```
 
 #### Usage
@@ -78,22 +101,6 @@ return
 2. steal items/runes/aegis during ember's w
 3. creep block
 
-#### Code
-``` Autoit
-repeater(key, host)
-{	
-  Loop
-  { 
-	Send, {%key%}	
-	Sleep, 25
-	If !getkeystate("Alt","p") 
-		break
-	if !GetKeyState(host,"p")
-		break
-  } 
-  Reload
-}
-```
 
 ## Hero specific scripts
 You can also create your own custom scripts. Simply create a new `.ahk` in the root directory and import the main script like this:
@@ -103,24 +110,24 @@ You can also create your own custom scripts. Simply create a new `.ahk` in the r
 ```
 You may also add a new icon:
 ``` Autoit
-I_Icon = icons/arc.png
+TraySetIcon("../icons/arc.png", 1)
 ```
 
 ### Switching between scripts
 For convenience there are several shortcuts in the main script that switch between scripts. For example, 
 * `Alt`+ `Numpad1` will chnage to **utility.ahk**
 ``` Autoit
-^Numpad1:: 
-Run "utility.ahk" 
-ExitApp
-return
+^Numpad1::{
+  Run "utility.ahk" 
+  ExitApp
+}
 ```
-* `Alt`+ `Numpad2` will chnage to **tinker.ahk**
+* `Alt`+ `Numpad2` will chnage to **invoker.ahk**
 ``` Autoit
-^Numpad2:: 
-Run "tinker.ahk" 
-ExitApp
-return
+^Numpad2::{
+  Run "invoker.ahk" 
+  ExitApp
+}
 ```
 
 <h3><img style="-webkit-user-select: none;" src="https://github.com/MaksymPylypenko/Dota-2-script/blob/master/icons/earthspirit.png"> earth.ahk</h3>
