@@ -7,7 +7,7 @@ An alternative to in-game cfg scripts.
 
 This file contains scripts that can be used in every game.
 
-### A quick way to save aegis expiry time or enemy buyback cooldown.
+### Save aegis / buyback cooldown
 > You can modify the code and make it even more fancy, e.g. by returning `expires 28:13, respawns 31:13-34:13`. But I prefer a minimal version.
 1. Click on the time to save it in the chat. 
 2. When you are not busy, type an optional *label* and a previously *saved time* in chat E.g.
