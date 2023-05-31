@@ -7,7 +7,7 @@ An alternative to in-game cfg scripts.
 
 This file contains scripts that can be used in every game.
 
-### A quick way to time aegis expiry or buyback cooldown
+### A quick way to save aegis expiry time or enemy buyback cooldown.
 > You can modify the code and make it even more fancy, e.g. by returning `expires 28:13, respawns 31:13-34:13`. But I prefer a minimal version.
 1. Click on the time to save it in the chat. 
 2. When you are not busy, type an optional *label* and a previously *saved time* in chat E.g.
@@ -15,7 +15,7 @@ This file contains scripts that can be used in every game.
    * `2313` 
    * `rosh 2510, am 2313`
 4. Press `LControl` + `Numpad5` (aegis expiry time) or `Numpad8` (buyback cooldown). 
-5. Only the last 4 characters will be considered! The updated time will be saved to your clipboard and you can recover it with `ctrl+v`. 
+5. Only the last 4 characters will be modified! The updated time will be saved to your clipboard and you can recover it with `ctrl+v`. 
    * `rosh 2813`
    * `2813` 
    * `rosh 2510, am 3113`
