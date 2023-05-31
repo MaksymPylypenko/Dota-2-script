@@ -127,7 +127,7 @@ For convenience there are several shortcuts in the main script that switch betwe
 <h3><img style="-webkit-user-select: none;" src="https://github.com/MaksymPylypenko/Dota-2-script/blob/master/icons/earthspirit.png"> earth.ahk</h3>
   
 #### Blink-safe boulder smash 
-This will place a stone and use boulder smash. There is a small delay to avoid a selfcast bug after using blink dagger. Otherwise if a stone is placed too quickly it will be placed in the previous location (before blink). 
+This will place a stone and use boulder smash. There is a small delay to avoid a selfcast bug after using blink dagger (e.g otherwise the stone could be placed in a pre-blink location). 
 * `Alt` + `q` 
 
 #### Invisible stone
@@ -139,7 +139,7 @@ There is a specific timing that allows to consume a stone that was just pushed, 
 <h3><img style="-webkit-user-select: none;" src="https://github.com/MaksymPylypenko/Dota-2-script/blob/master/icons/sf.png"> sf.ahk</h2>
 
 #### Directed raze 
-Uses directional move to direct the hero, follows with a raze and an attack hotkey.
+Uses directional move to direct the hero, follows with a raze and an attack.
 * `Alt` + `q` or `w` or `e` 
 
 <h3><img style="-webkit-user-select: none;" src="https://github.com/MaksymPylypenko/Dota-2-script/blob/master/icons/invoker.png"> invoker.ahk</h2>
