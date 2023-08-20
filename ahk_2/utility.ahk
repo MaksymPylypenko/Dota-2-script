@@ -48,7 +48,10 @@ incrementAndSaveClipboard(delta){
   Sleep 50
 
   clipboard := A_Clipboard
-  _variable := SubStr(clipboard, -4)	
+  _variable := SubStr(clipboard, -4)
+  if(!_variable){
+    return
+  }	
   _minutes := SubStr(_variable,-4,2) + delta
   _seconds := SubStr(_variable,-2,2)
   newMinutes := SubStr("00" . _minutes,-2)
@@ -67,6 +70,7 @@ incrementAndSaveClipboard(delta){
   }  
 }
 
+LControl & Numpad3::incrementAndSaveClipboard(3) ; Aegis
 LControl & Numpad5::incrementAndSaveClipboard(5) ; Rosh expiry
 LControl & Numpad8::incrementAndSaveClipboard(8) ; Buy back cooldown
 
