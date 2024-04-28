@@ -13,31 +13,36 @@ config.attack := "g"
 config.stop := "space"
 config.patrol_move := "b"
 
-^Numpad1::{
+Numpad1::{
   Run "utility.ahk" 
   ExitApp
 }
 
-^Numpad2::{
+Numpad2::{
   Run "invoker.ahk" 
   ExitApp
 }
 
-^Numpad3::{
+Numpad3::{
   Run "sf.ahk" 
   ExitApp
 }
 
-^Numpad4::{
+Numpad4::{
   Run "earth.ahk" 
   ExitApp
 }
 
 ; Quick directional move
 direct(){
-  Send "{" config.directional_move " down}{Click R}{" config.directional_move " up}"
+  Send "{" config.directional_move " down}"
+  Sleep 1
+  Send "{Click R}"
+  Sleep 1
+  Send "{" config.directional_move " up}"
+  Sleep 1
 }
-Home::direct()
+Right::direct()
 
 
 ; Save time
@@ -47,32 +52,43 @@ incrementAndSaveClipboard(delta){
   Send "^x"
   Sleep 50
 
+  ClipWait 0.5  ; Wait for the clipboard to contain data
   clipboard := A_Clipboard
   _variable := SubStr(clipboard, -4)
-  if(!_variable){
+  if (!_variable){
     return
-  }	
-  _minutes := SubStr(_variable,-4,2) + delta
-  _seconds := SubStr(_variable,-2,2)
-  newMinutes := SubStr("00" . _minutes,-2)
-  newTime :=  newMinutes _seconds		
-  ;MsgBox "newTime=" newTime
-
-  _strLen:=StrLen(clipboard)
-  if(_strLen<=4){
+  }
+  ; Check if the substrings for minutes and seconds are numeric
+  _minutes := SubStr(_variable, -4, 2)
+  _seconds := SubStr(_variable, -2, 2)
+  if (!IsNumber(_minutes) or !IsNumber(_seconds)){
+    ;MsgBox "Clipboard does not contain a valid time format."
+    return
+  }
+  _minutes += delta  ; Increment minutes by delta
+  newMinutes := SubStr("00" . _minutes, -2)
+  newTime := newMinutes . _seconds
+  
+  _strLen := StrLen(clipboard)
+  if (_strLen <= 4){
     A_Clipboard := newTime
   }
-  else{
-    restLen :=_strLen-4
+  else {
+    restLen := _strLen - 4
     restStr := SubStr(clipboard, 1, restLen)
-    result :=  restStr newTime
+    result := restStr . newTime
     A_Clipboard := result
-  }  
+  }
 }
 
-LControl & Numpad3::incrementAndSaveClipboard(3) ; Aegis
-LControl & Numpad5::incrementAndSaveClipboard(5) ; Rosh expiry
-LControl & Numpad8::incrementAndSaveClipboard(8) ; Buy back cooldown
+; Function to check if a string is numeric
+IsNumber(value){
+  return RegExMatch(value, "^\d+$")  ; Returns 1 if value is numeric, otherwise 0
+}
+
+LControl & End::incrementAndSaveClipboard(3) ; Aegis
+LControl & PgDn::incrementAndSaveClipboard(5) ; Rosh expiry
+LControl & PgUp::incrementAndSaveClipboard(8) ; Buy back cooldown
 
 
 ; Use Capslock as an extra hotkey without it interfering with your chat
@@ -95,6 +111,6 @@ $LWin::M
 
 
 ; Pause / Unpause Script
-Numpad0::suspend
+End::suspend
 
 
