@@ -27,24 +27,33 @@ incrementAndSaveClipboard(delta){
   Send "^x"
   Sleep 50
 
+  ClipWait 0.5  ; Wait for the clipboard to contain data
   clipboard := A_Clipboard
-  _variable := SubStr(clipboard, -4)	
-  _minutes := SubStr(_variable,-4,2) + delta
-  _seconds := SubStr(_variable,-2,2)
-  newMinutes := SubStr("00" . _minutes,-2)
-  newTime :=  newMinutes _seconds		
-  ;MsgBox "newTime=" newTime
-
-  _strLen:=StrLen(clipboard)
-  if(_strLen<=4){
+  _variable := SubStr(clipboard, -4)
+  if (!_variable){
+    return
+  }
+  ; Check if the substrings for minutes and seconds are numeric
+  _minutes := SubStr(_variable, -4, 2)
+  _seconds := SubStr(_variable, -2, 2)
+  if (!IsNumber(_minutes) or !IsNumber(_seconds)){
+    ;MsgBox "Clipboard does not contain a valid time format."
+    return
+  }
+  _minutes += delta  ; Increment minutes by delta
+  newMinutes := SubStr("00" . _minutes, -2)
+  newTime := newMinutes . _seconds
+  
+  _strLen := StrLen(clipboard)
+  if (_strLen <= 4){
     A_Clipboard := newTime
   }
-  else{
-    restLen :=_strLen-4
+  else {
+    restLen := _strLen - 4
     restStr := SubStr(clipboard, 1, restLen)
-    result :=  restStr newTime
+    result := restStr . newTime
     A_Clipboard := result
-  }  
+  }
 }
 ```
 
