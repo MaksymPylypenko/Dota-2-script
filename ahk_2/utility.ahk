@@ -9,6 +9,7 @@ config := Object()
 
 ; @TODO: set your values here!
 config.directional_move := "h"
+config.attach_non_hero := "n"
 config.attack := "g"
 config.stop := "space"
 config.patrol_move := "b"
@@ -33,16 +34,32 @@ Numpad4::{
   ExitApp
 }
 
+Numpad5::{
+  Run "techies.ahk" 
+  ExitApp
+}
+
+Numpad6::{
+  Run "veno.ahk" 
+  ExitApp
+}
+
+Numpad7::{
+  Run "ember.ahk" 
+  ExitApp
+}
+
 ; Quick directional move
-direct(){
-  Send "{" config.directional_move " down}"
+direct(var){
+  Send "{" var " down}"
   Sleep 1
   Send "{Click R}"
   Sleep 1
-  Send "{" config.directional_move " up}"
+  Send "{" var " up}"
   Sleep 1
 }
-Right::direct()
+Right::direct(config.directional_move)
+; !Right::direct(config.attach_non_hero)
 
 
 ; Save time
@@ -108,9 +125,3 @@ $LWin::M
   }
   return
 }
-
-
-; Pause / Unpause Script
-End::suspend
-
-
