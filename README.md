@@ -146,4 +146,10 @@ Uses directional move to direct the hero, follows with a raze and an attack.
 
 #### Click a sphere 3 times
 This allows to avoid tedious non-stop clicking to maximize regen & damage during laning stage or after casting a spell.
-* `Alt` + `q` or `w` or `e` 
+* `Alt` + `q` or `w` or `e`
+
+<h3><img style="-webkit-user-select: none;" src="https://github.com/MaksymPylypenko/Dota-2-script/blob/master/icons/veno.png"> veno.ahk</h2>
+
+#### Plague Ward Auto Attack: `Standard`
+This allows to send a unified unit order (e.g. Cancel Current Action) without holding CTRL. Helps with last hitting on the lane.
+* `Space`
