@@ -1,4 +1,4 @@
-I_Icon = icons/tinker.png
+I_Icon = ../icons/tinker.png
 
 #Include %A_ScriptDir%/utility.ahk
 #SingleInstance force

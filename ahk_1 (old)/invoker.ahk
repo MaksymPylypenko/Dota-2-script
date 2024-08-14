@@ -1,4 +1,4 @@
-﻿I_Icon = icons/invoker.png
+﻿I_Icon = ../icons/invoker.png
 
 #Include %A_ScriptDir%/utility.ahk
 #SingleInstance force
