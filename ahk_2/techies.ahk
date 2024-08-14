@@ -4,10 +4,12 @@
 #Include %A_ScriptDir%/utility.ahk
 TraySetIcon("../icons/techies.png", 1)
 
-; Directional Raze
+; Spam mines
 ; --------------------------------------------
-; uses directional move to direct the hero, follows with a raze and an attack hotkey
-
+; This can also be achieved by using mouse wheel up / down as your ultimate hotkey on quickcast
+; However, I am already using mouse wheel for items.
+; Unfortunately, using an AHK to spam a hotkey causes this issue:
+; https://www.reddit.com/r/DotA2/comments/1cwut6d/this_almost_looks_like_a_softlock_to_prevent/
 
 
 ; WheelUp::SendInput "{r}"
@@ -22,29 +24,3 @@ Random sleepTime := Random(20, 60)
   }
   return
 }
-
-
-
-; AutoClickEnabled := true
-
-; Auto-click "r" when "r" is pressed and held
-; ~r:: {
-;   ; Check if auto-click is enabled
-;   ; if (AutoClickEnabled) {
-;       ; Keep clicking "r" until "r" is released
-;       while (GetKeyState("r", "P")) {
-;           Send "r"
-;           Sleep 10 ; Adjust the sleep time to change the speed of auto-clicking
-;       }
-;   ; }
-; }
-
-; ; Disable auto-clicking when "Enter" is pressed
-; Enter:: {
-;     AutoClickEnabled := false
-; }
-
-; ; Re-enable auto-clicking when "Esc" is pressed
-; Esc:: {
-;     AutoClickEnabled := true
-; }
