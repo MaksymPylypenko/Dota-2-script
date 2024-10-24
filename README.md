@@ -61,7 +61,7 @@ incrementAndSaveClipboard(delta){
 > This is similar to a quick attack / move, but for a directional move. It will force the hero to move in a straigt line without looking for the shortest path.
 
 * Make sure your config object includes your ingame directional move hotkey. For example: `config.directional_move := "h"`
-* This should ideally be mapped to a rarely used key, so it doesn't interfer with the chat.
+* This should ideally be mapped to a rarely used key, so it doesn't interfere with the chat.
 * One of my mouse hotkeys is mapped to `home`, but you can replace it with XButton1 / XButton2 / LWin etc
 
 #### Usage 
