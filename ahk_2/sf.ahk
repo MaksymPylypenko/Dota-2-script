@@ -10,21 +10,21 @@ TraySetIcon("../icons/sf.png", 1)
 
 
 LAlt & q::{
-  direct(config.directional_move)
+  Send "{LAlt up}{" config.directional_move " down}{Click R}{" config.directional_move " up}"
   Send "q"  
   Sleep 50
   Send config.attack
 }
 
 LAlt & w::{
-  direct(config.directional_move)
+  Send "{LAlt up}{" config.directional_move " down}{Click R}{" config.directional_move " up}"
   Send "w"
   Sleep 50
   Send config.attack
 }
 
 LAlt & e::{  
-  direct(config.directional_move)
+  Send "{LAlt up}{" config.directional_move " down}{Click R}{" config.directional_move " up}"
   Send "e"
   Sleep 50
   Send config.attack

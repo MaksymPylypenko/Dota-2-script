@@ -8,8 +8,9 @@ TraySetIcon("../icons/idle.png", 1)
 config := Object()
 
 ; @TODO: set your values here!
-config.directional_move := "h"
+config.directional_move := "F13"
 config.attach_non_hero := "n"
+config.nonhero_click := "F14"
 config.attack := "g"
 config.stop := "space"
 config.patrol_move := "b"
@@ -25,7 +26,7 @@ Numpad2::{
 }
 
 Numpad3::{
-  Run "sf.ahk" 
+  Run "largo.ahk" 
   ExitApp
 }
 
@@ -35,7 +36,7 @@ Numpad4::{
 }
 
 Numpad5::{
-  Run "techies.ahk" 
+  Run "sf.ahk" 
   ExitApp
 }
 
@@ -46,6 +47,11 @@ Numpad6::{
 
 Numpad7::{
   Run "ember.ahk" 
+  ExitApp
+}
+
+Numpad8::{
+  Run "kez.ahk" 
   ExitApp
 }
 
@@ -60,6 +66,7 @@ direct(var){
 }
 Right::direct(config.directional_move)
 ; !Right::direct(config.attach_non_hero)
+; F15::direct(config.nonhero_click)
 
 
 ; Save time
